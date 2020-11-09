@@ -1,0 +1,53 @@
+{
+    "fighters": [
+        {
+            "name": "goku",
+            "code": 0,
+            "health": 2000,
+            "damage": 100,
+            "speed": 200,
+            "accuracy": 200,
+            "ospecial": [{
+                "name": "kamehameha",
+                "power": 900
+            }],
+            "dspecial": [{
+                "name": "dodge",
+                "power": 200
+            }]
+        },
+        {
+            "name": "vegeta",
+            "code": 1,
+            "health": 1800,
+            "damage": 300,
+            "speed": 1000,
+            "accuracy": 100,
+            "ospecial": [{
+                "name": "Galick Gun",
+                "power": 1000
+            }],
+            "dspecial": [{
+                "name": "dodge",
+                "power": 220
+            }]
+
+        },
+        {
+            "name": "krillan",
+            "code": 2,
+            "health": 40,
+            "damage": 60,
+            "speed": 200,
+            "accuracy": 100,
+            "ospecial": [
+                { "name": "destructo disk", "power": 500 },
+                { "name": "kamehameha", "power": 600 }
+            ],
+            "dspecial": [{
+                "name": "sloar flare",
+                "power": 300
+            }]
+        }
+    ]
+}
