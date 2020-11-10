@@ -6,6 +6,7 @@ let starter, player0, player1, whoseTurn, fighters;
 let clock = 1000;
 let turnsSet = false;
 
+
 // a promise used for delay
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
@@ -69,8 +70,8 @@ async function init() {
 	})
 }
 
-async function fighttt(player0, player1){
-	
+async function fighttt(player0, player1) {
+
 	// setting the starter based on the speed stat
 	if (player0.speed > player1.speed) {
 		starter = 0;
@@ -81,27 +82,34 @@ async function fighttt(player0, player1){
 		starter = (Math.ceil(Math.random() * 2) === 1) ? 0 : 1
 	}
 
-	if(!turnsSet){
+	if (!turnsSet) {
 		await setTurns();
 		turnsSet = true;
 	}
-	
-	console.log(starter);
+
 
 	do {
-		// out of turn player ---------- turn player
-		fighters[1 - whoseTurn].loseHP(fighters[whoseTurn].damage);
-		console.log(`${fighters[whoseTurn].name}(${fighters[whoseTurn].health}) did ${fighters[whoseTurn].damage} to ${fighters[1 - whoseTurn].name}(${fighters[1 - whoseTurn].health}) \n`);
+
+		// turn player determining damage 
+		let move = fighters[whoseTurn].doDamage();
+		let moveDamage = move.power;
+		let moveName = move.name;
+
+		// losing HP for out of turn player
+		fighters[1 - whoseTurn].takeDamage(moveDamage);
+
+		console.log(`${fighters[whoseTurn].name}(${fighters[whoseTurn].health}) did ${moveName}(${moveDamage}) to ${fighters[1 - whoseTurn].name}(${fighters[1 - whoseTurn].health}) \n`);
 
 		// changing turns
 		whoseTurn = 1 - whoseTurn;
 
+		// delay for the next turn
 		await timer(clock);
 	} while (player0.health > 0 && player1.health > 0);
 
 }
 
-function setTurns(){
+function setTurns() {
 	return new Promise((resolve, reject) => {
 		if (starter == 0) {
 			whoseTurn = 0;
@@ -122,26 +130,67 @@ class Fighter {
 		this.speed = fighter.speed;
 		this.accuracy = fighter.accuracy;
 		this.ospecial = fighter.ospecial;
-		this.dspecial = fighter.special;
+		this.dspecial = fighter.dspecial;
 		this.isAlive = true;
 	}
 
-	chooseDamage() {
+	doDamage() {
+		/* let isSpecial = (Math.floor(Math.random() * 2) === 1) ? true : false;
+		if (!isSpecial) { // no dspecial
+			return this.damage;
+		}else{ // for dspecial
+			console.log('ospecial:' + this.ospecial);
+			return 0;
+		} */
+
+		// getting the total of weights of all moves 
+		let totalChance = 1;
+		this.ospecial.forEach(move => {
+			totalChance += move.chance;
+		});
+
+		const threshold = Math.floor(Math.random() * totalChance);
+
+		totalChance = 0;
+
+		for (let i = 0; i < this.ospecial.length; ++i) {
+			// Add the weight to our running total.
+			totalChance += this.ospecial[i].chance;
+
+			// If this value falls within the threshold, we're done!
+			if (totalChance >= threshold) {
+				return this.ospecial[i];
+			}
+		}
+
 
 	}
 
-	loseHP(incomingDamage) {
-		// let isDefend = (Math.floor(Math.random() * 2) === 1) ? true : false;
+	takeDamage(incomingDamage) {
+		let isSpecial = (Math.floor(Math.random() * 2) === 1) ? true : false;
+		this.health -= incomingDamage;
 
-		// if (!isDefend) {
-		// 	this.health -= incomingDamage;
-		// }
+		/* if (!isSpecial) { // no dspecial
 			this.health -= incomingDamage;
+		} else { // for dspecial
+			console.log(this.dspecial);
+		} */
 	}
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* ************************************ */
 
 class Fight {
 	constructor(fighter0, fighter1) {

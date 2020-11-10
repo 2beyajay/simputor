@@ -1,19 +1,34 @@
 {
-    "fighters": [
-        {
+    "fighters": [{
             "name": "goku",
             "code": 0,
             "health": 2000,
             "damage": 100,
             "speed": 200,
             "accuracy": 200,
+
             "ospecial": [{
+                "name": "melee",
+                "power": 100,
+                "chance": 75
+            }, {
                 "name": "kamehameha",
-                "power": 900
+                "power": 900,
+                "chance": 25
             }],
+
             "dspecial": [{
+                "name": "no defence",
+                "power": 0,
+                "chance": 75
+            }, {
                 "name": "dodge",
-                "power": 200
+                "power": 200,
+                "chance": 15
+            }, {
+                "name": "sloar flare",
+                "power": 300,
+                "chance": 10
             }]
         },
         {
@@ -23,13 +38,25 @@
             "damage": 300,
             "speed": 1000,
             "accuracy": 100,
+
             "ospecial": [{
+                "name": "melee",
+                "power": 300,
+                "chance": 75
+            }, {
                 "name": "Galick Gun",
-                "power": 1000
+                "power": 1000,
+                "chance": 25
             }],
+
             "dspecial": [{
+                "name": "no defence",
+                "power": 0,
+                "chance": 75
+            }, {
                 "name": "dodge",
-                "power": 220
+                "power": 220,
+                "chance": 25
             }]
 
         },
@@ -40,13 +67,31 @@
             "damage": 60,
             "speed": 200,
             "accuracy": 100,
-            "ospecial": [
-                { "name": "destructo disk", "power": 500 },
-                { "name": "kamehameha", "power": 600 }
+
+            "ospecial": [{
+                    "name": "melee",
+                    "power": 100,
+                    "chance": 75
+                }, {
+                    "name": "destructo disk",
+                    "power": 500,
+                    "chance": 15
+                },
+                {
+                    "name": "kamehameha",
+                    "power": 600,
+                    "chance": 10
+                }
             ],
+            
             "dspecial": [{
+                "name": "no defence",
+                "power": 0,
+                "chance": 75
+            }, {
                 "name": "sloar flare",
-                "power": 300
+                "power": 300,
+                "chance": 25
             }]
         }
     ]
