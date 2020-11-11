@@ -154,7 +154,12 @@ async function fighttt(player0, player1) {
 		await timer(clock);
 	} while (player0.health > 0 && player1.health > 0);
 
-	console.log(`${fighters[1 - whoseTurn].name} died. The winner is ${fighters[whoseTurn].name}`);
+	if(player0.health <= 0){
+		console.log(`${player0.name} died. The winner is ${player1.name}`);
+	} 
+	if (player1.health <= 0) {
+		console.log(`${player1.name} died. The winner is ${player0.name}`);
+	}
 
 }
 

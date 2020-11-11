@@ -2,7 +2,7 @@
     "fighters": [{
             "name": "goku",
             "code": 0,
-            "health": 5000,
+            "health": 2000,
             "speed": 200,
             "accuracy": 200,
 
@@ -33,7 +33,7 @@
         {
             "name": "vegeta",
             "code": 1,
-            "health": 5000,
+            "health": 2000,
             "speed": 1000,
             "accuracy": 100,
 
