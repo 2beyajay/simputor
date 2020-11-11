@@ -6,13 +6,17 @@ let starter, player0, player1, whoseTurn, fighters;
 let clock = 2000;
 let turnsSet = false;
 
-
 // a promise used for delay
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
 
-
 async function init() {
+
+	let slider = document.querySelector('#clock');
+	slider.addEventListener('change', (e) => {
+		console.log(slider.value);
+		clock = clock / slider.value
+	})
 
 	// fetching data from json
 	let data = await fetch('fighters.json')
@@ -122,31 +126,6 @@ async function fighttt(player0, player1) {
 			}
 		}
 
-
-
-		// console.log(damageTaken.name);
-		/* if (defensePower < 0) {
-			console.log(`${defenseName}(${defensePower})`);
-			fighters[1 - whoseTurn].health -= movePower;
-
-			console.log(`${fighters[whoseTurn].name}(${fighters[whoseTurn].health}) did ${moveName}(${movePower}) to ${fighters[1 - whoseTurn].name}(${fighters[1 - whoseTurn].health}) \n`);
-
-		} else {
-			if (defensePower > movePower) {
-				console.log(`${defenseName}(${defensePower})`);
-				fighters[whoseTurn].health -= defensePower;
-
-				console.log(`${fighters[1 - whoseTurn].name}(${fighters[1 - whoseTurn].health}) countered ${moveName} ${fighters[whoseTurn].name}(${fighters[whoseTurn].health}) \n`);
-			} else{
-				console.log(`${defenseName}(${defensePower})`);
-				fighters[whoseTurn].health -= (movePower - defensePower)
-
-				console.log(`${fighters[1 - whoseTurn].name}(${fighters[1 - whoseTurn].health}) defended ${moveName} with ${defenseName} and reduced ${defensePower} of the incoming damage \n`);
-			}
-		} */
-
-
-
 		// changing turns
 		whoseTurn = 1 - whoseTurn;
 
@@ -234,90 +213,5 @@ class Fighter {
 				return this.dspecial[i];
 			}
 		}
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ********************************************** */
-/* *************** old code below ***************  */
-/* ********************************************** */
-
-class Fight {
-	constructor(fighter0, fighter1) {
-		this.fighter0 = fighter0;
-		this.fighter1 = fighter1;
-		this.turnNum = 0;
-		this.whoseTurn = 0;
-		this.turnsSet = false;
-
-		// who will hit first based on the 'speed' stat
-		this.starter;
-
-		if (this.fighter0.speed > this.fighter1.speed) {
-			this.starter = 0;
-		} else if (this.fighter0.speed < this.fighter1.speed) {
-			this.starter = 1;
-		} else {
-			// if the speed stats are the same, randomly choosing the starter
-			this.starter = (Math.ceil(Math.random() * 2) === 1) ? 0 : 1
-		}
-
-		this.fightStart()
-
-	}
-
-	// promise to return the turnSequence
-	setTurns() {
-		return new Promise((resolve, reject) => {
-			let turnSequence = [];
-			if (this.starter == 0) {
-				turnSequence = [this.fighter0, this.fighter1]
-				this.whoseTurn = 0;
-			} else {
-				turnSequence = [this.fighter1, this.fighter0]
-				this.whoseTurn = 1;
-			}
-			resolve(turnSequence)
-		})
-	}
-
-	doDamage() {
-
-	}
-
-	async fightStart() {
-		let self = this; // duplicating the object because setTimeout changes the meaning of 'this'
-
-
-		// array for saving turn sequence
-		if (!this.turnsSet) {
-			let turnSequence = await this.setTurns();
-			console.log(turnSequence);
-			this.turnsSet = true;
-		}
-
-
-		// check if dead, stop the recursion if dead
-		if (turnSequence.health <= 0) {
-			// start death function
-			console.log(turnSequence[0].name + ' is dead');
-		}
-		// pick normal or special damage
-		// pick special defense or not
-
-		// change turn
-		this.whoseTurn = 1 - this.whoseTurn;
-
 	}
 }
