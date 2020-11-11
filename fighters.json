@@ -2,8 +2,7 @@
     "fighters": [{
             "name": "goku",
             "code": 0,
-            "health": 2000,
-            "damage": 100,
+            "health": 5000,
             "speed": 200,
             "accuracy": 200,
 
@@ -20,22 +19,21 @@
             "dspecial": [{
                 "name": "no defence",
                 "power": 0,
-                "chance": 75
+                "chance": 10
             }, {
                 "name": "dodge",
-                "power": 200,
-                "chance": 15
+                "power": 1000,
+                "chance": 65
             }, {
                 "name": "sloar flare",
                 "power": 300,
-                "chance": 10
+                "chance": 25
             }]
         },
         {
             "name": "vegeta",
             "code": 1,
-            "health": 1800,
-            "damage": 300,
+            "health": 5000,
             "speed": 1000,
             "accuracy": 100,
 
@@ -52,11 +50,11 @@
             "dspecial": [{
                 "name": "no defence",
                 "power": 0,
-                "chance": 75
+                "chance": 10
             }, {
                 "name": "dodge",
                 "power": 220,
-                "chance": 25
+                "chance": 90
             }]
 
         },
@@ -64,7 +62,6 @@
             "name": "krillan",
             "code": 2,
             "health": 40,
-            "damage": 60,
             "speed": 200,
             "accuracy": 100,
 

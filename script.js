@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 let starter, player0, player1, whoseTurn, fighters;
-let clock = 1000;
+let clock = 2000;
 let turnsSet = false;
 
 
@@ -92,13 +92,60 @@ async function fighttt(player0, player1) {
 
 		// turn player determining damage 
 		let move = fighters[whoseTurn].doDamage();
-		let moveDamage = move.power;
+		let movePower = move.power;
 		let moveName = move.name;
 
-		// losing HP for out of turn player
-		fighters[1 - whoseTurn].takeDamage(moveDamage);
+		// determining the defense move for out of turn player
+		let defenseTaken = fighters[1 - whoseTurn].defend();
+		let defensePower = defenseTaken.power;
+		let defenseName = defenseTaken.name;
 
-		console.log(`${fighters[whoseTurn].name}(${fighters[whoseTurn].health}) did ${moveName}(${moveDamage}) to ${fighters[1 - whoseTurn].name}(${fighters[1 - whoseTurn].health}) \n`);
+
+		console.log('\n');
+		console.log(moveName, movePower);
+		console.log(defenseName, defensePower);
+
+		// no defense
+		if (defensePower <= 0) { 
+			fighters[1 - whoseTurn].health -= movePower
+			console.log(`${fighters[1 - whoseTurn].name} damaged by ${moveName} and now at ${fighters[1 - whoseTurn].health} \n`);
+		} else {
+			// simple defense
+			if (defensePower < movePower) { 
+				fighters[1 - whoseTurn].health -= (movePower - defensePower)
+				console.log(`${fighters[1 - whoseTurn].name} reduced ${moveName} by ${defensePower} with ${defenseName} and now at ${fighters[1 - whoseTurn].health} \n`);
+			} 
+			// counter
+			else{ 
+				fighters[whoseTurn].health -= defensePower;
+				console.log(`${fighters[1 - whoseTurn].name} countered ${moveName} with ${defenseName} and did ${defensePower} damage`);
+			}
+		}
+
+
+
+		// console.log(damageTaken.name);
+		/* if (defensePower < 0) {
+			console.log(`${defenseName}(${defensePower})`);
+			fighters[1 - whoseTurn].health -= movePower;
+
+			console.log(`${fighters[whoseTurn].name}(${fighters[whoseTurn].health}) did ${moveName}(${movePower}) to ${fighters[1 - whoseTurn].name}(${fighters[1 - whoseTurn].health}) \n`);
+
+		} else {
+			if (defensePower > movePower) {
+				console.log(`${defenseName}(${defensePower})`);
+				fighters[whoseTurn].health -= defensePower;
+
+				console.log(`${fighters[1 - whoseTurn].name}(${fighters[1 - whoseTurn].health}) countered ${moveName} ${fighters[whoseTurn].name}(${fighters[whoseTurn].health}) \n`);
+			} else{
+				console.log(`${defenseName}(${defensePower})`);
+				fighters[whoseTurn].health -= (movePower - defensePower)
+
+				console.log(`${fighters[1 - whoseTurn].name}(${fighters[1 - whoseTurn].health}) defended ${moveName} with ${defenseName} and reduced ${defensePower} of the incoming damage \n`);
+			}
+		} */
+
+
 
 		// changing turns
 		whoseTurn = 1 - whoseTurn;
@@ -106,6 +153,8 @@ async function fighttt(player0, player1) {
 		// delay for the next turn
 		await timer(clock);
 	} while (player0.health > 0 && player1.health > 0);
+
+	console.log(`${fighters[1 - whoseTurn].name} died. The winner is ${fighters[whoseTurn].name}`);
 
 }
 
@@ -126,32 +175,28 @@ class Fighter {
 		this.name = fighter.name;
 		this.code = fighter.code;
 		this.health = fighter.health;
-		this.damage = fighter.damage;
 		this.speed = fighter.speed;
 		this.accuracy = fighter.accuracy;
 		this.ospecial = fighter.ospecial;
 		this.dspecial = fighter.dspecial;
 		this.isAlive = true;
+
+		this.damageTotalChance = 1;
+		this.ospecial.forEach(move => {
+			this.damageTotalChance += move.chance;
+		});
+
+		this.defenseTotalChance = 1;
+		this.dspecial.forEach(move => {
+			this.defenseTotalChance += move.chance;
+		});
+
 	}
 
 	doDamage() {
-		/* let isSpecial = (Math.floor(Math.random() * 2) === 1) ? true : false;
-		if (!isSpecial) { // no dspecial
-			return this.damage;
-		}else{ // for dspecial
-			console.log('ospecial:' + this.ospecial);
-			return 0;
-		} */
+		const threshold = Math.floor(Math.random() * this.damageTotalChance);
 
-		// getting the total of weights of all moves 
-		let totalChance = 1;
-		this.ospecial.forEach(move => {
-			totalChance += move.chance;
-		});
-
-		const threshold = Math.floor(Math.random() * totalChance);
-
-		totalChance = 0;
+		let totalChance = 0;
 
 		for (let i = 0; i < this.ospecial.length; ++i) {
 			// Add the weight to our running total.
@@ -162,19 +207,28 @@ class Fighter {
 				return this.ospecial[i];
 			}
 		}
-
-
 	}
 
-	takeDamage(incomingDamage) {
-		let isSpecial = (Math.floor(Math.random() * 2) === 1) ? true : false;
-		this.health -= incomingDamage;
+	defend() {
+		// getting the total of weights of all moves
+		/* let totalChance = 1;
+		this.dspecial.forEach(move => {
+			totalChance += move.chance;
+		}); */
 
-		/* if (!isSpecial) { // no dspecial
-			this.health -= incomingDamage;
-		} else { // for dspecial
-			console.log(this.dspecial);
-		} */
+		const threshold = Math.floor(Math.random() * this.defenseTotalChance);
+
+		let totalChance = 0;
+
+		for (let i = 0; i < this.dspecial.length; ++i) {
+			// Add the weight to our running total.
+			totalChance += this.dspecial[i].chance;
+
+			// If this value falls within the threshold, we're done!
+			if (totalChance >= threshold) {
+				return this.dspecial[i];
+			}
+		}
 	}
 }
 
@@ -190,7 +244,9 @@ class Fighter {
 
 
 
-/* ************************************ */
+/* ********************************************** */
+/* *************** old code below ***************  */
+/* ********************************************** */
 
 class Fight {
 	constructor(fighter0, fighter1) {
