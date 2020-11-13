@@ -23,7 +23,7 @@ async function init() {
 	})
 
 	// fetching data from json
-	let data = await fetch('fighters.json')
+	let data = await fetch('data/fighters.json')
 		.then(response => response.json())
 		.catch(err => {
 			alert(err)
