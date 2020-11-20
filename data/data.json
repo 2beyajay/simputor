@@ -1,0 +1,279 @@
+{
+    
+    "dragon ball": {
+        "goku": {
+            "base": {
+                "health": 2000,
+                "speed": 200,
+                "accuracy": 200,
+                "imgURL": "imageURl.com",
+                "ospecial": [{
+                    "name": "melee",
+                    "power": 100,
+                    "chance": 75
+                }, {
+                    "name": "kamehameha",
+                    "power": 900,
+                    "chance": 25
+                }],
+
+                "dspecial": [{
+                    "name": "no defence",
+                    "power": 0,
+                    "chance": 10
+                }, {
+                    "name": "dodge",
+                    "power": 1000,
+                    "chance": 65
+                }, {
+                    "name": "sloar flare",
+                    "power": 300,
+                    "chance": 25
+                }]
+            },
+            "super saiyan 1": {
+                "health": 2000,
+                "speed": 200,
+                "accuracy": 200,
+                "imgURL": "imageURl.com",
+                "ospecial": [{
+                    "name": "melee",
+                    "power": 100,
+                    "chance": 75
+                }, {
+                    "name": "kamehameha",
+                    "power": 900,
+                    "chance": 25
+                }],
+
+                "dspecial": [{
+                    "name": "no defence",
+                    "power": 0,
+                    "chance": 10
+                }, {
+                    "name": "dodge",
+                    "power": 1000,
+                    "chance": 65
+                }, {
+                    "name": "sloar flare",
+                    "power": 300,
+                    "chance": 25
+                }]
+            }
+        },
+        "vegeta": {
+            "base": {
+                "health": 2000,
+                "speed": 200,
+                "accuracy": 200,
+                "imgURL": "imageURl.com",
+                "ospecial": [{
+                    "name": "melee",
+                    "power": 100,
+                    "chance": 75
+                }, {
+                    "name": "kamehameha",
+                    "power": 900,
+                    "chance": 25
+                }],
+
+                "dspecial": [{
+                    "name": "no defence",
+                    "power": 0,
+                    "chance": 10
+                }, {
+                    "name": "dodge",
+                    "power": 1000,
+                    "chance": 65
+                }, {
+                    "name": "sloar flare",
+                    "power": 300,
+                    "chance": 25
+                }]
+            },
+            "super saiyan 1": {
+                "health": 2000,
+                "speed": 200,
+                "accuracy": 200,
+                "imgURL": "imageURl.com",
+                "ospecial": [{
+                    "name": "melee",
+                    "power": 100,
+                    "chance": 75
+                }, {
+                    "name": "kamehameha",
+                    "power": 900,
+                    "chance": 25
+                }],
+
+                "dspecial": [{
+                    "name": "no defence",
+                    "power": 0,
+                    "chance": 10
+                }, {
+                    "name": "dodge",
+                    "power": 1000,
+                    "chance": 65
+                }, {
+                    "name": "sloar flare",
+                    "power": 300,
+                    "chance": 25
+                }]
+            }
+        },
+        "krillin": {
+            "base": {
+                "health": 2000,
+                "speed": 200,
+                "accuracy": 200,
+                "imgURL": "imageURl.com",
+                "ospecial": [{
+                    "name": "melee",
+                    "power": 100,
+                    "chance": 75
+                }, {
+                    "name": "kamehameha",
+                    "power": 900,
+                    "chance": 25
+                }],
+
+                "dspecial": [{
+                    "name": "no defence",
+                    "power": 0,
+                    "chance": 10
+                }, {
+                    "name": "dodge",
+                    "power": 1000,
+                    "chance": 65
+                }, {
+                    "name": "sloar flare",
+                    "power": 300,
+                    "chance": 25
+                }]
+            }
+        }
+    },
+
+    "shovel knight": {
+        "shovel knight": {
+            "base": {
+                "health": 2000,
+                "speed": 200,
+                "accuracy": 200,
+                "imgURL": "imageURl.com",
+                "ospecial": [{
+                    "name": "melee",
+                    "power": 100,
+                    "chance": 75
+                }, {
+                    "name": "kamehameha",
+                    "power": 900,
+                    "chance": 25
+                }],
+
+                "dspecial": [{
+                    "name": "no defence",
+                    "power": 0,
+                    "chance": 10
+                }, {
+                    "name": "dodge",
+                    "power": 1000,
+                    "chance": 65
+                }, {
+                    "name": "sloar flare",
+                    "power": 300,
+                    "chance": 25
+                }]
+            },
+            "maxed": {
+                "health": 2000,
+                "speed": 200,
+                "accuracy": 200,
+                "imgURL": "imageURl.com",
+                "ospecial": [{
+                    "name": "melee",
+                    "power": 100,
+                    "chance": 75
+                }, {
+                    "name": "kamehameha",
+                    "power": 900,
+                    "chance": 25
+                }],
+
+                "dspecial": [{
+                    "name": "no defence",
+                    "power": 0,
+                    "chance": 10
+                }, {
+                    "name": "dodge",
+                    "power": 1000,
+                    "chance": 65
+                }, {
+                    "name": "sloar flare",
+                    "power": 300,
+                    "chance": 25
+                }]
+            }
+        },
+        "spectre knight": {
+            "base": {
+                "health": 2000,
+                "speed": 200,
+                "accuracy": 200,
+                "imgURL": "imageURl.com",
+                "ospecial": [{
+                    "name": "melee",
+                    "power": 100,
+                    "chance": 75
+                }, {
+                    "name": "kamehameha",
+                    "power": 900,
+                    "chance": 25
+                }],
+
+                "dspecial": [{
+                    "name": "no defence",
+                    "power": 0,
+                    "chance": 10
+                }, {
+                    "name": "dodge",
+                    "power": 1000,
+                    "chance": 65
+                }, {
+                    "name": "sloar flare",
+                    "power": 300,
+                    "chance": 25
+                }]
+            },
+            "maxed": {
+                "health": 2000,
+                "speed": 200,
+                "accuracy": 200,
+                "imgURL": "imageURl.com",
+                "ospecial": [{
+                    "name": "melee",
+                    "power": 100,
+                    "chance": 75
+                }, {
+                    "name": "kamehameha",
+                    "power": 900,
+                    "chance": 25
+                }],
+
+                "dspecial": [{
+                    "name": "no defence",
+                    "power": 0,
+                    "chance": 10
+                }, {
+                    "name": "dodge",
+                    "power": 1000,
+                    "chance": 65
+                }, {
+                    "name": "sloar flare",
+                    "power": 300,
+                    "chance": 25
+                }]
+            }
+        }
+    }
+}
