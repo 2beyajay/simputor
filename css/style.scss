@@ -1,4 +1,4 @@
-body{
+body {
 
     background-color: black;
     color: white;
@@ -9,7 +9,7 @@ body{
         margin: auto;
         width: 75%;
         min-width: 500px;
-        height: 60vh;
+        height: 40vh;
         min-height: 350px;
         justify-content: space-around;
 
@@ -42,7 +42,7 @@ body{
             color: white;
             border: 2px white solid;
 
-            .selected{
+            .selected {
                 border: none;
                 background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
                 color: black;
@@ -74,9 +74,21 @@ body{
         }
     }
 
-    #logs{
+    #logs {
         margin: auto;
+        padding: 25px;
         width: 75%;
         min-width: 500px;
+        background-color: #f5f7fa;
+        color: black;
+
     }
+}
+
+#showSelection {
+    display: flex;
+    margin: auto;
+    width: 75%;
+    min-width: 500px;
+    justify-content: space-around;
 }

@@ -15,11 +15,11 @@
     <!-- controls for the speed of the simulation -->
     <label for="clock">speed:</label>
     <input type="range" id="clock" name="clock" min="0.5" max="3" step="0.5" value="1">
-    <h2>Current speed: x<span id="clockValue"></span></h2>
+    <h5>Current speed: x<span id="clockValue"></span></h5>
 
 
 
-    <!-- <div id="wrapper">
+    <div id="wrapper">
         <div id="player-1-div">
             <h1>Select player 1</h1>
             <ul id="select0" class="select menu vertical dropdown" data-dropdown-menu style="max-width: 250px;"></ul>
@@ -35,10 +35,16 @@
         </div>
     </div>
 
-    <div id="logs"></div> -->
+    <div id="showSelection">
+        <p>player 1: <span id="player1Name"></span></p>
+        <p>player 2: <span id="player2Name"></span></p>
+    </div>
+
+    <div id="logs"></div>
 
 
-    <div id="wrapper">
+    <!-- old style -->
+    <!-- <div id="wrapper">
         <div id="select0" class="list">
 
         </div>
@@ -52,9 +58,7 @@
         </div>
     </div>
 
-    <div id="logs">
-
-    </div>
+    <div id="logs"></div> -->
 
 
     
@@ -73,8 +77,9 @@
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
         integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
 
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
     <!-- <script src="js/script2.js"></script> -->
+    <script src="js/script3.js"></script>
 </body>
 
 </html>

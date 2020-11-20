@@ -11,7 +11,7 @@ body #wrapper {
   margin: auto;
   width: 75%;
   min-width: 500px;
-  height: 60vh;
+  height: 40vh;
   min-height: 350px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -93,7 +93,21 @@ body #wrapper .list .character p {
 
 body #logs {
   margin: auto;
+  padding: 25px;
   width: 75%;
   min-width: 500px;
+  background-color: #f5f7fa;
+  color: black;
+}
+
+#showSelection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: 75%;
+  min-width: 500px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=style.css.map */

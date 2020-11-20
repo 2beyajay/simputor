@@ -2,7 +2,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	init();
 });
 
-let starter, player0, player1, whoseTurn, fighters, clock = 2000,turnsSet = false;
+let starter, player0, player1, whoseTurn, fighters, clock = 2000,
+	turnsSet = false;
 let logs = document.querySelector('#logs');
 
 // a promise used for delay
