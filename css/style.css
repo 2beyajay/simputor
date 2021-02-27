@@ -80,11 +80,10 @@ header h1 {
   background-color: #c78100;
 }
 
-#as-it-happens-heading,
-#demo-heading {
+#as-it-happens-heading {
   margin-top: 1em;
   text-align: center;
-  border-bottom: 5px solid #5c839c;
+  border-bottom: 5px solid #c78100;
 }
 
 #logs {
