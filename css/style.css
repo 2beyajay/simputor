@@ -91,8 +91,8 @@ body #wrapper .list .character p {
   font-size: 1.25rem;
 }
 
-body #as-it-happens-heading {
-  margin-top: 2em;
+body #as-it-happens-heading, body #demo-heading {
+  margin-top: 1em;
   text-align: center;
   border-bottom: 5px solid #5c839c;
 }
@@ -107,6 +107,20 @@ body #logs {
   color: black;
 }
 
+body #logs p {
+  padding: 1em;
+  border-radius: 10px;
+  color: white;
+}
+
+body #logs p:nth-child(2n) {
+  background-color: #600094;
+}
+
+body #logs p:nth-child(2n+1) {
+  background-color: #769400;
+}
+
 #showSelection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,5 +130,33 @@ body #logs {
   min-width: 500px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.player-selection-demo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.player-selection-demo .franchise-accordion {
+  width: 45%;
+}
+
+.player-selection-demo .franchise-accordion .forms-div {
+  margin-bottom: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.player-selection-demo .franchise-accordion .forms-div p {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */

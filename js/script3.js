@@ -1,17 +1,17 @@
-window.addEventListener('DOMContentLoaded', (event) => {   
-    init();
+window.addEventListener('DOMContentLoaded', (event) => {
+	init();
 });
 
 // Initialize Firebase
 var firebaseConfig = {
-    apiKey: "AIzaSyBa4bXMvkUtbHiYEubr5StWzXKHxxWjZ5M",
-    authDomain: "crunchy-sim.firebaseapp.com",
-    databaseURL: "https://crunchy-sim.firebaseio.com",
-    projectId: "crunchy-sim",
-    storageBucket: "crunchy-sim.appspot.com",
-    messagingSenderId: "295858081829",
-    appId: "1:295858081829:web:4adff1a02b1408c9e52fcc",
-    measurementId: "G-0DSW1GHFDC"
+	apiKey: "AIzaSyBa4bXMvkUtbHiYEubr5StWzXKHxxWjZ5M",
+	authDomain: "crunchy-sim.firebaseapp.com",
+	databaseURL: "https://crunchy-sim.firebaseio.com",
+	projectId: "crunchy-sim",
+	storageBucket: "crunchy-sim.appspot.com",
+	messagingSenderId: "295858081829",
+	appId: "1:295858081829:web:4adff1a02b1408c9e52fcc",
+	measurementId: "G-0DSW1GHFDC"
 };
 firebase.initializeApp(firebaseConfig);
 let ref = firebase.database().ref('/');
@@ -25,19 +25,19 @@ let player0NameHtml = document.querySelector('#player1Name')
 let player1NameHtml = document.querySelector('#player2Name')
 let logs = document.querySelector('#logs');
 
-let player0, player1, fighter0, fighter1; 
+let player0, player1, fighter0, fighter1;
 
 let starter, whoseTurn, fighters, clock = 2000,
-    turnsSet = false;
-    
+	turnsSet = false;
+
 // speed clock
 let slider = document.querySelector('#clock');
 let clockValue = document.querySelector('#clockValue');
 clockValue.innerText = slider.value;
 slider.addEventListener('change', (e) => {
-    console.log(slider.value);
-    clock = clock / slider.value
-    clockValue.innerText = slider.value;
+	console.log(slider.value);
+	clock = clock / slider.value
+	clockValue.innerText = slider.value;
 });
 
 // a promise used for delay
@@ -46,85 +46,83 @@ const timer = ms => new Promise(res => setTimeout(res, ms))
 
 
 ref.once('value', (snapshot) => {
-    let allData;
-    allData = snapshot.val();
+	let allData;
+	allData = snapshot.val();
 
-    for (const franchises in allData) {
-        // getting the franchise names
-        let franchiseLi = document.createElement('li');
-        franchiseLi.classList.add('oneFranchise');
-        let franchiseA = document.createElement('a'); //creating the franchise anchor
-        franchiseA.href = "#";
-        franchiseA.innerText = franchises; //setting the anchor text
-        franchiseLi.appendChild(franchiseA);
+	for (const franchises in allData) {
+		// getting the franchise names
+		let franchiseLi = document.createElement('li');
+		franchiseLi.classList.add('oneFranchise');
+		let franchiseA = document.createElement('a'); //creating the franchise anchor
+		franchiseA.href = "#";
+		franchiseA.innerText = franchises; //setting the anchor text
+		franchiseLi.appendChild(franchiseA);
 
-        let characterUl = document.createElement('ul'); //creating the character UL
-        franchiseLi.appendChild(characterUl);
-        characterUl.classList.add('vertical', 'nested', 'menu');
+		let characterUl = document.createElement('ul'); //creating the character UL
+		franchiseLi.appendChild(characterUl);
+		characterUl.classList.add('vertical', 'nested', 'menu');
 
-        let characters = allData[franchises];
-        for (const chars in characters) {
-            // getting the character names
-            let characterLi = document.createElement('li');
-            characterLi.classList.add('oneCharacter');
-            characterUl.appendChild(characterLi);
+		let characters = allData[franchises];
+		for (const chars in characters) {
+			// getting the character names
+			let characterLi = document.createElement('li');
+			characterLi.classList.add('oneCharacter');
+			characterUl.appendChild(characterLi);
 
-            let characterA = document.createElement('a'); //creating the character anchor
-            characterA.href = "#";
-            characterA.innerText = chars;
-            characterLi.appendChild(characterA);
+			let characterA = document.createElement('a'); //creating the character anchor
+			characterA.href = "#";
+			characterA.innerText = chars;
+			characterLi.appendChild(characterA);
 
-            let formUl = document.createElement('ul');
-            formUl.classList.add('vertical', 'nested', 'menu');
-            characterLi.appendChild(formUl);
+			let formUl = document.createElement('ul');
+			formUl.classList.add('vertical', 'nested', 'menu');
+			characterLi.appendChild(formUl);
 
-            let forms = characters[chars];
-            for (const frms in forms) {
-                let oneFormContent = `<li class="oneForm" data-franchise="${franchises}" data-character="${chars}"      data-form="${frms}">
-                                        <a href="#">${frms}</a>
-                                    </li>`
-                formUl.innerHTML += oneFormContent;
-            }
-        }
+			let forms = characters[chars];
+			for (const frms in forms) {
+				let oneFormContent = `<li class="oneForm" data-franchise="${franchises}" data-character="${chars}" data-form="${frms}">
+																<a href="#">${frms}</a>
+															</li>`
+				formUl.innerHTML += oneFormContent;
+			}
+		}
 
-        select0.appendChild(franchiseLi);
+		select0.appendChild(franchiseLi);
+	}
 
-        
-    }
-    
-    select1.innerHTML = select0.innerHTML;
+	select1.innerHTML = select0.innerHTML;
 
-    
-    let p0Forms = document.querySelectorAll('#select0 .oneForm');
-    let p1Forms = document.querySelectorAll('#select1 .oneForm');
-    
-    p0Forms.forEach(form => {
-        form.addEventListener('click', (e) => {
-            let player0ref = firebase.database().ref(form.dataset.franchise + '/' + form.dataset.character + '/' + form.dataset.form);
 
-            player0ref.once('value', (player0data) => {
-                fighter0 = player0data.val();
-                fighter0.name = `${form.dataset.character}(${form.dataset.form})`;
-                console.log('player 1:' + fighter0.name);
-                player0NameHtml.innerText = fighter0.name
-            })
-        })
-    });
+	let p0Forms = document.querySelectorAll('#select0 .oneForm');
+	let p1Forms = document.querySelectorAll('#select1 .oneForm');
 
-    p1Forms.forEach(form => {
-        form.addEventListener('click', (e) => {
-            let player1ref = firebase.database().ref(form.dataset.franchise + '/' + form.dataset.character + '/' + form.dataset.form);
+	p0Forms.forEach(form => {
+		form.addEventListener('click', (e) => {
+			let player0ref = firebase.database().ref(form.dataset.franchise + '/' + form.dataset.character + '/' + form.dataset.form);
 
-            player1ref.once('value', (player1data) => {
-                fighter1 = player1data.val();
-                fighter1.name = `${form.dataset.character}(${form.dataset.form})`;
-                console.log('player 2:' + fighter1.name);
-                player1NameHtml.innerText = fighter1.name
-            })
-        })
-    });
+			player0ref.once('value', (player0data) => {
+				fighter0 = player0data.val();
+				fighter0.name = `${form.dataset.character}(${form.dataset.form})`;
+				console.log('player 1:' + fighter0.name);
+				player0NameHtml.innerText = fighter0.name
+			})
+		})
+	});
 
-    $(document).foundation(); // getting the foundation at the last so it can run on dynamically created HTML elements
+	p1Forms.forEach(form => {
+		form.addEventListener('click', (e) => {
+			let player1ref = firebase.database().ref(form.dataset.franchise + '/' + form.dataset.character + '/' + form.dataset.form);
+
+			player1ref.once('value', (player1data) => {
+				fighter1 = player1data.val();
+				fighter1.name = `${form.dataset.character}(${form.dataset.form})`;
+				console.log('player 2:' + fighter1.name);
+				player1NameHtml.innerText = fighter1.name
+			})
+		})
+	});
+
+	$(document).foundation(); // getting the foundation at the last so it can run on dynamically created HTML elements
 });
 
 
@@ -132,71 +130,12 @@ ref.once('value', (snapshot) => {
 
 async function init() {
 
-	// fetching data from json
-	/* let data = await fetch('data/fighters.json')
-		.then(response => response.json())
-		.catch(err => {
-			alert(err)
-		}); */
-
-	// setting all fighters
-	// let allFighters = data.fighters;
-
-	// both select list divs
-	// let selects = document.querySelectorAll('.list');
-	// let submit = document.querySelector('#submit button');
-	// allFighters.forEach(fighter => {
-	// 	let content = `<div class="character" data-code="${fighter.code}">
-	// 						<img src="img/img.png" alt="${fighter.name}">
-	// 						<p>${fighter.name}</p>
-	// 					</div>`;
-	// 	selects.forEach(select => {
-	// 		select.innerHTML += content;
-	// 	})
-	// })
-
-
-	// let fighter0code = -1,
-	// 	fighter1code = -1;
-
-	// click eventlistner for particular character divs in 1st list
-	// let list0characters = selects[0].querySelectorAll('div');
-	// list0characters.forEach(list0Char => {
-	// 	list0Char.addEventListener('click', (e) => {
-	// 		fighter0code = list0Char.dataset.code;
-	// 		list0characters.forEach(element => {
-	// 			element.classList.remove('selected')
-	// 		})
-	// 		list0Char.classList.add('selected')
-	// 	})
-	// });
-
-	// click eventlistner for particular character divs in 2nd list
-	// let list1characters = selects[1].querySelectorAll('div');
-	// list1characters.forEach(list1Char => {
-	// 	list1Char.addEventListener('click', (e) => {
-	// 		fighter1code = list1Char.dataset.code;
-	// 		list1characters.forEach(element => {
-	// 			element.classList.remove('selected');
-	// 		})
-	// 		list1Char.classList.add('selected')
-	// 	})
-	// });
-
 	submit.addEventListener('click', (e) => {
 		if (!fighter0 || !fighter1) {
 			console.log('please select 2 fighters');
 		} else {
 
 			logs.innerHTML = '';
-
-			// getting selected fighters from the json data 
-			// let fighter0 = allFighters.filter(fighter => {
-			// 	return fighter.code == fighter0code;
-			// })
-			// let fighter1 = allFighters.filter(fighter => {
-			// 	return fighter.code == fighter1code;
-			// })
 
 			player0 = new Fighter(fighter0);
 			player1 = new Fighter(fighter1);
