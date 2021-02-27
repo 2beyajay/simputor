@@ -18,11 +18,11 @@ let ref = firebase.database().ref('/');
 
 
 
-let select0 = document.querySelector('#select0');
-let select1 = document.querySelector('#select1');
+// let select0 = document.querySelector('#select0');
+// let select1 = document.querySelector('#select1');
 let submit = document.querySelector('#submit button');
-let player0NameHtml = document.querySelector('#player1Name')
-let player1NameHtml = document.querySelector('#player2Name')
+let player0NameHtml = document.querySelector('.showSelection .player1Name')
+let player1NameHtml = document.querySelector('.showSelection .player2Name')
 let logs = document.querySelector('#logs');
 
 let player0, player1, fighter0, fighter1;
@@ -48,8 +48,8 @@ const timer = ms => new Promise(res => setTimeout(res, ms))
 
 
 // trying out the new layout
-let franchiceUL0 = document.querySelector('.selection-sect .p0')
-let franchiceUL1 = document.querySelector('.selection-sect .p1')
+let franchiceUL0 = document.querySelector('.selection-sect #p0')
+let franchiceUL1 = document.querySelector('.selection-sect #p1')
 
 
 
@@ -60,20 +60,89 @@ ref.once('value', (snapshot) => {
 
 	for (const franchises in allData) {
 		// getting the franchise names
-		let franchiseLi = document.createElement('li');
-		franchiseLi.classList.add('franchise-li');
-		let franchiseAnchor = document.createElement('a'); //creating the franchise anchor
-		franchiseAnchor.href = "#";
-		franchiseAnchor.innerText = franchises; //setting the anchor text
-		franchiseLi.appendChild(franchiseAnchor);
+		let franchisesLi = document.createElement('li');
+		franchisesLi.classList.add('franchises-li', 'accordion-item');
+		franchisesLi.setAttribute('data-accordion-item', '');
+
+		let franchiseTitle = document.createElement('a'); //creating the franchise anchor
+		franchiseTitle.href = "#";
+		franchiseTitle.classList.add('accordion-title');
+		franchiseTitle.innerText = franchises; //setting the anchor text
+		franchisesLi.appendChild(franchiseTitle);
+
+		let charactersAccordionDiv = document.createElement('div');
+		charactersAccordionDiv.classList.add('accordion-content');
+		charactersAccordionDiv.setAttribute('data-tab-content', '');
+		franchisesLi.appendChild(charactersAccordionDiv);
+
+		let charactersAccordionUL = document.createElement('ul');
+		charactersAccordionUL.classList.add('accordion', 'characters-accordion');
+		charactersAccordionUL.setAttribute('data-accordion', '')
+		charactersAccordionUL.setAttribute('data-multi-expand', 'true')
+		charactersAccordionUL.setAttribute('data-allow-all-closed', 'true')
+		charactersAccordionDiv.appendChild(charactersAccordionUL);
+
+
+
+		let characters = allData[franchises];
+		for (const chars in characters) {
+
+			let characterLi = document.createElement('li');
+			characterLi.classList.add('character-li', 'accordion-item');
+			characterLi.setAttribute('data-accordion-item', '');
+			charactersAccordionUL.appendChild(characterLi);
+
+			let characterTitle = document.createElement('a'); //creating the franchise anchor
+			characterTitle.href = "#";
+			characterTitle.classList.add('accordion-title');
+			characterTitle.innerText = chars; //setting the anchor text
+			characterLi.appendChild(characterTitle);
+
+			let formsAccordionDiv = document.createElement('div');
+			formsAccordionDiv.classList.add('accordion-content');
+			formsAccordionDiv.setAttribute('data-tab-content', '');
+			characterLi.appendChild(formsAccordionDiv);
+
+
+			let forms = characters[chars];
+			for (const frms in forms) {
+				let formDiv = document.createElement('div');
+				formDiv.classList.add('form-div');
+				formDiv.setAttribute('data-franchise', franchises);
+				formDiv.setAttribute('data-character', chars);
+				formDiv.setAttribute('data-form', frms);
+				formsAccordionDiv.appendChild(formDiv);
+
+				let formIconImg = document.createElement('img');
+				formIconImg.setAttribute('src', 'https://via.placeholder.com/50')
+				formIconImg.setAttribute('alt', `${franchises} -> ${chars} -> ${frms}`)
+				formDiv.appendChild(formIconImg);
+
+				let formTitle = document.createElement('p'); //creating the franchise anchor
+				formTitle.innerText = frms; //setting the anchor text
+				formDiv.appendChild(formTitle);
+
+
+				// append stats p here
+					//
+					//
+					//
+					// 
+			}
+		}
+
+
+		franchiceUL0.appendChild(franchisesLi);
 	}
 
+	franchiceUL1.innerHTML = franchiceUL0.innerHTML;
 
 
+	let p0Forms = document.querySelectorAll('#p0 .form-div');
+	let p1Forms = document.querySelectorAll('#p1 .form-div');
 
 
-
-	for (const franchises in allData) {
+	/* for (const franchises in allData) {
 		// getting the franchise names
 		let franchiseLi = document.createElement('li');
 		franchiseLi.classList.add('oneFranchise');
@@ -81,6 +150,7 @@ ref.once('value', (snapshot) => {
 		franchiseA.href = "#";
 		franchiseA.innerText = franchises; //setting the anchor text
 		franchiseLi.appendChild(franchiseA);
+		// 
 
 		let characterUl = document.createElement('ul'); //creating the character UL
 		franchiseLi.appendChild(characterUl);
@@ -112,13 +182,13 @@ ref.once('value', (snapshot) => {
 		}
 
 		select0.appendChild(franchiseLi);
-	}
+	} 
 
 	select1.innerHTML = select0.innerHTML;
+	*/
 
-
-	let p0Forms = document.querySelectorAll('#select0 .oneForm');
-	let p1Forms = document.querySelectorAll('#select1 .oneForm');
+	// let p0Forms = document.querySelectorAll('#select0 .oneForm');
+	// let p1Forms = document.querySelectorAll('#select1 .oneForm');
 
 	p0Forms.forEach(form => {
 		form.addEventListener('click', (e) => {
@@ -167,7 +237,7 @@ async function init() {
 
 
 			/* ******* starting the fight sequence ********* */
-			// fight(player0, player1);
+			fight(player0, player1);
 		}
 	})
 

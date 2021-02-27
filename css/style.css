@@ -17,38 +17,6 @@ body {
       justify-content: space-around;
 }
 
-#wrapper #submit {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 20px;
-}
-
-#wrapper #submit button {
-  font-size: 1.5rem;
-  background-color: #8BC6EC;
-  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-  border: none;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-}
-
-#wrapper #submit button:hover {
-  -webkit-transform: scale(1.015);
-          transform: scale(1.015);
-}
-
 #wrapper .list {
   overflow-y: auto;
   -webkit-box-flex: 2;
@@ -91,6 +59,81 @@ body {
   font-size: 1.25rem;
 }
 
+.speedToolDiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #c78100;
+}
+
+header {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+header h1 {
+  text-align: center;
+}
+
+.selection-sect {
+  width: 90vw;
+  min-width: 75rem;
+  margin: 0 auto;
+}
+
+.selection-sect .franchise-accordion {
+  background: transparent;
+}
+
+.selection-sect .franchise-accordion .accordion-title {
+  font-size: inherit;
+  font-weight: bold;
+  color: #c78100;
+}
+
+.selection-sect .franchise-accordion .form-div {
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid #c78100;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.selection-sect .franchise-accordion .form-div p {
+  font-weight: bold;
+  color: #c78100;
+}
+
+.selection-sect .franchise-accordion .form-div:hover {
+  background-color: #c78100;
+}
+
+.selection-sect .franchise-accordion .form-div:hover p {
+  color: white;
+}
+
+#submit {
+  padding: 20px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+#submit button {
+  font-size: 1.5rem;
+  border: 1px solid #c78100;
+  color: white;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+#submit button:hover {
+  background-color: #c78100;
+}
+
 #as-it-happens-heading,
 #demo-heading {
   margin-top: 1em;
@@ -118,22 +161,24 @@ body {
   background-color: #600094;
 }
 
-#logs p:nth-child(2n+1) {
+#logs p:nth-child(2n + 1) {
   background-color: #769400;
 }
 
-#showSelection {
+.showSelection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: auto;
   width: 75%;
   min-width: 500px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.selection-sect, .selection-sect-old {
+.selection-sect,
+.selection-sect-old {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,11 +187,13 @@ body {
           justify-content: space-evenly;
 }
 
-.selection-sect .franchise-accordion, .selection-sect-old .franchise-accordion {
+.selection-sect .franchise-accordion,
+.selection-sect-old .franchise-accordion {
   width: 45%;
 }
 
-.selection-sect .franchise-accordion .forms-div, .selection-sect-old .franchise-accordion .forms-div {
+.selection-sect .franchise-accordion .form-div,
+.selection-sect-old .franchise-accordion .form-div {
   margin-bottom: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,7 +204,8 @@ body {
   gap: 15px;
 }
 
-.selection-sect .franchise-accordion .forms-div p, .selection-sect-old .franchise-accordion .forms-div p {
+.selection-sect .franchise-accordion .form-div p,
+.selection-sect-old .franchise-accordion .form-div p {
   margin-bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */
