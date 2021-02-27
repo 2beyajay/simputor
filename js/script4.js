@@ -195,6 +195,10 @@ async function init() {
 
 			/* ******* starting the fight sequence ********* */
 			fight(player0, player1);
+
+			
+			logs.scrollIntoView({behavior: "smooth", inline: "nearest"});
+
 		}
 	})
 
