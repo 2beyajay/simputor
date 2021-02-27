@@ -1,486 +1,991 @@
 {
+	"Dragon ball": {
+		"Goku": {
+			"base": {
+				"health": 100,
+				"speed": 30,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "melee",
+					"power": 15,
+					"chance": 65
+				}, {
+					"name": "Kamehameha",
+					"power": 45,
+					"chance": 35
+				}],
 
-    "dragon ball": {
-        "goku": {
-            "base": {
-                "health": 2000,
-                "speed": 200,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "melee",
-                    "power": 100,
-                    "chance": 75
-                }, {
-                    "name": "kamehameha",
-                    "power": 900,
-                    "chance": 25
-                }],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 20
+				}, {
+					"name": "Dodge",
+					"power": 20,
+					"chance": 40
+				}, {
+					"name": "Energy Shield",
+					"power": 40,
+					"chance": 40
+				}]
+			},
+			"super saiyan 1": {
+				"health": 2000,
+				"speed": 200,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "melee",
+					"power": 100,
+					"chance": 75
+				}, {
+					"name": "kamehameha",
+					"power": 900,
+					"chance": 25
+				}],
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 10
-                }, {
-                    "name": "dodge",
-                    "power": 1000,
-                    "chance": 65
-                }, {
-                    "name": "sloar flare",
-                    "power": 300,
-                    "chance": 25
-                }]
-            },
-            "super saiyan 1": {
-                "health": 2000,
-                "speed": 200,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "melee",
-                    "power": 100,
-                    "chance": 75
-                }, {
-                    "name": "kamehameha",
-                    "power": 900,
-                    "chance": 25
-                }],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 10
+				}, {
+					"name": "dodge",
+					"power": 1000,
+					"chance": 65
+				}, {
+					"name": "sloar flare",
+					"power": 300,
+					"chance": 25
+				}]
+			}
+		},
+		"Vegeta": {
+			"base": {
+				"health": 95,
+				"speed": 40,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "melee",
+					"power": 10,
+					"chance": 35
+				}, {
+					"name": "Galick Gun",
+					"power": 50,
+					"chance": 40
+				}, {
+					"name": "Big Bang Attack",
+					"power": 55,
+					"chance": 15
+				}],
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 10
-                }, {
-                    "name": "dodge",
-                    "power": 1000,
-                    "chance": 65
-                }, {
-                    "name": "sloar flare",
-                    "power": 300,
-                    "chance": 25
-                }]
-            }
-        },
-        "vegeta": {
-            "base": {
-                "health": 2000,
-                "speed": 200,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "melee",
-                    "power": 100,
-                    "chance": 75
-                }, {
-                    "name": "kamehameha",
-                    "power": 900,
-                    "chance": 25
-                }],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 35
+				}, {
+					"name": "dodge",
+					"power": 15,
+					"chance": 65
+				}]
+			},
+			"super saiyan 1": {
+				"health": 2000,
+				"speed": 200,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "melee",
+					"power": 100,
+					"chance": 75
+				}, {
+					"name": "kamehameha",
+					"power": 900,
+					"chance": 25
+				}],
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 10
-                }, {
-                    "name": "dodge",
-                    "power": 1000,
-                    "chance": 65
-                }, {
-                    "name": "sloar flare",
-                    "power": 300,
-                    "chance": 25
-                }]
-            },
-            "super saiyan 1": {
-                "health": 2000,
-                "speed": 200,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "melee",
-                    "power": 100,
-                    "chance": 75
-                }, {
-                    "name": "kamehameha",
-                    "power": 900,
-                    "chance": 25
-                }],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 10
+				}, {
+					"name": "dodge",
+					"power": 1000,
+					"chance": 65
+				}, {
+					"name": "sloar flare",
+					"power": 300,
+					"chance": 25
+				}]
+			}
+		},
+		"krillin": {
+			"base": {
+				"health": 50,
+				"speed": 23,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "melee",
+					"power": 15,
+					"chance": 95
+				}, {
+					"name": "Destructo-Disk",
+					"power": 30,
+					"chance": 5
+				}],
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 10
-                }, {
-                    "name": "dodge",
-                    "power": 1000,
-                    "chance": 65
-                }, {
-                    "name": "sloar flare",
-                    "power": 300,
-                    "chance": 25
-                }]
-            }
-        },
-        "krillin": {
-            "base": {
-                "health": 2000,
-                "speed": 200,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "melee",
-                    "power": 100,
-                    "chance": 75
-                }, {
-                    "name": "kamehameha",
-                    "power": 900,
-                    "chance": 25
-                }],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 40
+				}, {
+					"name": "dodge",
+					"power": 10,
+					"chance": 60
+				}]
+			}
+		},
+		"Piccolo": {
+			"base": {
+				"health": 110,
+				"speed": 18,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "melee",
+					"power": 15,
+					"chance": 65
+				}, {
+					"name": "Special Beam Cannon",
+					"power": 65,
+					"chance": 5
+				}, {
+					"name": "Ki Blast",
+					"power": 25,
+					"chance": 30
+				}],
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 10
-                }, {
-                    "name": "dodge",
-                    "power": 1000,
-                    "chance": 65
-                }, {
-                    "name": "sloar flare",
-                    "power": 300,
-                    "chance": 25
-                }]
-            }
-        }
-    },
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 20
+				}, {
+					"name": "Dodge",
+					"power": 20,
+					"chance": 40
+				}, {
+					"name": "Energy Shield",
+					"power": 40,
+					"chance": 40
+				}]
+			}
+		},
+		"Gohan": {
+			"Kid Gohan": {
+				"base": {
+					"health": 50,
+					"speed": 24,
+					"imgURL": "imageURl.com",
+					"ospecial": [{
+						"name": "melee",
+						"power": 10,
+						"chance": 45
+					}, {
+						"name": "Masenko",
+						"power": 30,
+						"chance": 55
+					}],
 
-    "Shovel Knight": {
-        "Shovel Knight": {
-            "Base": {
-                "health": 40,
-                "speed": 10,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "Shovel Slap",
-                    "power": 15,
-                    "chance": 75
-                }, {
-                    "name": "Shovel Drop",
-                    "power": 15,
-                    "chance": 25
-                }],
+					"dspecial": [{
+						"name": "No Defence",
+						"power": 0,
+						"chance": 40
+					}, {
+						"name": "dodge",
+						"power": 20,
+						"chance": 60
+					}]
+				}
+			}
+		}
+	},
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 40
-                }, {
-                    "name": "Dodge",
-                    "power": 8,
-                    "chance": 60
-                }]
-            },
-            "Maxed": {
-                "health": 10,
-                "speed": 15,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "Shovel Slap",
-                    "power": 15,
-                    "chance": 75
-                }, {
-                    "name": "Charged Shovel Slap",
-                    "power": 30,
-                    "chance": 75
-                }, {
-                    "name": "Shovel Drop",
-                    "power": 15,
-                    "chance": 25
-                },{
-                    "name": "Flare Wand",
-                    "power": 15,
-                    "chance": 25
-                }],
+	"Shovel Knight": {
+		"Shovel Knight": {
+			"Base": {
+				"health": 40,
+				"speed": 10,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Shovel Slap",
+					"power": 15,
+					"chance": 75
+				}, {
+					"name": "Shovel Drop",
+					"power": 15,
+					"chance": 25
+				}],
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 40
-                }, {
-                    "name": "Dodge",
-                    "power": 8,
-                    "chance": 35
-                }, {
-                    "name": "Phase",
-                    "power": 40,
-                    "chance": 25
-                }]
-            }
-        },
-        "Spectre Knight": {
-            "Base": {
-                "health": 40,
-                "speed": 25,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "Scythe Slash",
-                    "power": 15,
-                    "chance": 40
-                }, {
-                    "name": "Dash Slash",
-                    "power": 15,
-                    "chance": 60
-                }],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 40
+				}, {
+					"name": "Dodge",
+					"power": 8,
+					"chance": 60
+				}]
+			},
+			"Maxed": {
+				"health": 10,
+				"speed": 15,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Shovel Slap",
+					"power": 15,
+					"chance": 75
+				}, {
+					"name": "Charged Shovel Slap",
+					"power": 30,
+					"chance": 75
+				}, {
+					"name": "Shovel Drop",
+					"power": 15,
+					"chance": 25
+				}, {
+					"name": "Flare Wand",
+					"power": 15,
+					"chance": 25
+				}],
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 25
-                }, {
-                    "name": "Dodge",
-                    "power": 8,
-                    "chance": 75
-                }]
-            },
-            "Maxed": {
-                "health": 100,
-                "speed": 38,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "Scythe Slash",
-                    "power": 15,
-                    "chance": 25
-                }, {
-                    "name": "Charged Scythe Slash",
-                    "power": 30,
-                    "chance": 15
-                }, {
-                    "name": "Dash Slash",
-                    "power": 15,
-                    "chance": 45
-                },{
-                    "name": "Judgement Rush",
-                    "power": 45,
-                    "chance": 15
-                }],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 40
+				}, {
+					"name": "Dodge",
+					"power": 8,
+					"chance": 35
+				}, {
+					"name": "Phase",
+					"power": 40,
+					"chance": 25
+				}]
+			}
+		},
+		"Spectre Knight": {
+			"Base": {
+				"health": 40,
+				"speed": 25,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Scythe Slash",
+					"power": 15,
+					"chance": 40
+				}, {
+					"name": "Dash Slash",
+					"power": 15,
+					"chance": 60
+				}],
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 40
-                }, {
-                    "name": "Dodge",
-                    "power": 8,
-                    "chance": 30
-                }, {
-                    "name": "Hover Plume",
-                    "power": 40,
-                    "chance": 15
-                }, {
-                    "name": "Chronos Coin",
-                    "power": 40,
-                    "chance": 15
-                }]
-            }
-        }
-    },
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 25
+				}, {
+					"name": "Dodge",
+					"power": 8,
+					"chance": 75
+				}]
+			},
+			"Maxed": {
+				"health": 100,
+				"speed": 38,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Scythe Slash",
+					"power": 15,
+					"chance": 25
+				}, {
+					"name": "Charged Scythe Slash",
+					"power": 30,
+					"chance": 15
+				}, {
+					"name": "Dash Slash",
+					"power": 15,
+					"chance": 45
+				}, {
+					"name": "Judgement Rush",
+					"power": 45,
+					"chance": 15
+				}],
 
-    "Attack on Titan": {
-        "Levi Ackerman": {
-            "Base": {
-                "health": 30,
-                "speed": 50,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "Kick",
-                    "power": 5,
-                    "chance": 35
-                }, {
-                    "name": "Slash",
-                    "power": 20,
-                    "chance": 65
-                }],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 40
+				}, {
+					"name": "Dodge",
+					"power": 8,
+					"chance": 30
+				}, {
+					"name": "Hover Plume",
+					"power": 40,
+					"chance": 15
+				}, {
+					"name": "Chronos Coin",
+					"power": 40,
+					"chance": 15
+				}]
+			}
+		}
+	},
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 45
-                }, {
-                    "name": "dodge",
-                    "power": 10,
-                    "chance": 55
-                }]
-            }
-        },
-        "Eren Yeager": {
-            "Attack Titan": {
-                "health": 300,
-                "speed": 20,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "Melee",
-                    "power": 50,
-                    "chance": 70
-                },{
-                    "name": "Bite",
-                    "power": 20,
-                    "chance": 30
-                }],
+	"Attack on Titan": {
+		"Levi Ackerman": {
+			"Base": {
+				"health": 30,
+				"speed": 50,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Kick",
+					"power": 5,
+					"chance": 35
+				}, {
+					"name": "Slash",
+					"power": 20,
+					"chance": 65
+				}],
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 50
-                }, {
-                    "name": "Dodge",
-                    "power": 15,
-                    "chance": 30
-                }, {
-                    "name": "Block",
-                    "power": 10,
-                    "chance": 20
-                }]
-            }
-        }
-    },
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 45
+				}, {
+					"name": "dodge",
+					"power": 10,
+					"chance": 55
+				}]
+			}
+		},
+		"Eren Yeager": {
+			"Attack Titan": {
+				"health": 300,
+				"speed": 20,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Melee",
+					"power": 50,
+					"chance": 70
+				}, {
+					"name": "Bite",
+					"power": 20,
+					"chance": 30
+				}],
 
-    "Real World": {
-        "Human": {
-            "base": {
-                "health": 15,
-                "speed": 2,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "melee",
-                    "power": 1,
-                    "chance": 65
-                }, {
-                    "name": "kick",
-                    "power": 1.5,
-                    "chance": 35
-                }],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 50
+				}, {
+					"name": "Dodge",
+					"power": 15,
+					"chance": 30
+				}, {
+					"name": "Block",
+					"power": 10,
+					"chance": 20
+				}]
+			}
+		}
+	},
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 80
-                }, {
-                    "name": "Block",
-                    "power": 3,
-                    "chance": 20
-                }]
-            },
-            "Armed": {
-                "health": 20,
-                "speed": 1,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "Melee",
-                    "power": 1,
-                    "chance": 55
-                }, {
-                    "name": "Gun",
-                    "power": 10,
-                    "chance": 45
-                }],
+	"Real World": {
+		"Human": {
+			"base": {
+				"health": 15,
+				"speed": 2,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "melee",
+					"power": 1,
+					"chance": 65
+				}, {
+					"name": "kick",
+					"power": 1.5,
+					"chance": 35
+				}],
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 35
-                }, {
-                    "name": "Shield",
-                    "power": 5,
-                    "chance": 65
-                }]
-            }
-        }
-    },
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 80
+				}, {
+					"name": "Block",
+					"power": 3,
+					"chance": 20
+				}]
+			},
+			"Armed": {
+				"health": 20,
+				"speed": 1,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Melee",
+					"power": 1,
+					"chance": 55
+				}, {
+					"name": "Gun",
+					"power": 10,
+					"chance": 45
+				}],
 
-    "Fullmetal Alchemist": {
-        "Edward Elric": {
-            "Base": {
-                "health": 50,
-                "speed": 35,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "Melee",
-                    "power": 7,
-                    "chance": 15
-                }, {
-                    "name": "Automail Arm",
-                    "power": 15,
-                    "chance": 70
-                }, {
-                    "name": "Alchemy",
-                    "power": 25,
-                    "chance": 15
-                }],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 35
+				}, {
+					"name": "Shield",
+					"power": 5,
+					"chance": 65
+				}]
+			}
+		}
+	},
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 30
-                }, {
-                    "name": "dodge",
-                    "power": 10,
-                    "chance": 50
-                }, {
-                    "name": "Alchemy",
-                    "power": 20,
-                    "chance": 20
-                }]
-            }
-        },
-        "Alphonse Elric": {
-            "Armoured": {
-                "health": 150,
-                "speed": 10,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "Melee",
-                    "power": 12,
-                    "chance": 65
-                }, {
-                    "name": "Alchemy",
-                    "power": 22,
-                    "chance": 35
-                }],
+	"Fullmetal Alchemist": {
+		"Edward Elric": {
+			"Base": {
+				"health": 50,
+				"speed": 35,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Melee",
+					"power": 7,
+					"chance": 15
+				}, {
+					"name": "Automail Arm",
+					"power": 15,
+					"chance": 70
+				}, {
+					"name": "Alchemy",
+					"power": 25,
+					"chance": 15
+				}],
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 25
-                }, {
-                    "name": "Block",
-                    "power": 15,
-                    "chance": 55
-                }, {
-                    "name": "Alchemy",
-                    "power": 18,
-                    "chance": 20
-                }]
-            }
-        }
-    },
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 30
+				}, {
+					"name": "dodge",
+					"power": 10,
+					"chance": 50
+				}, {
+					"name": "Alchemy",
+					"power": 20,
+					"chance": 20
+				}]
+			}
+		},
+		"Alphonse Elric": {
+			"Armoured": {
+				"health": 150,
+				"speed": 10,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Melee",
+					"power": 12,
+					"chance": 65
+				}, {
+					"name": "Alchemy",
+					"power": 22,
+					"chance": 35
+				}],
 
-    "Megaman": {
-        "Zero": {
-            "Base": {
-                "health": 100,
-                "speed": 70,
-                "imgURL": "imageURl.com",
-                "ospecial": [{
-                    "name": "Z-Saber",
-                    "power": 35,
-                    "chance": 100
-                }],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 25
+				}, {
+					"name": "Block",
+					"power": 15,
+					"chance": 55
+				}, {
+					"name": "Alchemy",
+					"power": 18,
+					"chance": 20
+				}]
+			}
+		}
+	},
 
-                "dspecial": [{
-                    "name": "No Defence",
-                    "power": 0,
-                    "chance": 30
-                }, {
-                    "name": "Dash",
-                    "power": 20,
-                    "chance": 70
-                }]
-            }
-        }
-    }
+	"Megaman": {
+		"Zero": {
+			"Base": {
+				"health": 100,
+				"speed": 70,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Z-Saber",
+					"power": 35,
+					"chance": 100
+				}],
+
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 30
+				}, {
+					"name": "Dash",
+					"power": 20,
+					"chance": 70
+				}]
+			},
+			"Maxed": {
+				"health": 200,
+				"speed": 75,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Z-Saber Combo",
+					"power": 65,
+					"chance": 80
+				}, {
+					"name": "Buster Shot",
+					"power": 45,
+					"chance": 20
+				}],
+
+				"dspecial": [{
+					"name": "Shield Boomerang",
+					"power": 50,
+					"chance": 20
+				}, {
+					"name": "Dash",
+					"power": 25,
+					"chance": 80
+				}]
+			}
+		}
+	},
+
+	"The Legend of Zelda": {
+		"Link": {
+			"base": {
+				"health": 24,
+				"speed": 25,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Spin Attack",
+					"power": 21,
+					"chance": 35
+				}, {
+					"name": "Sword Stab",
+					"power": 7,
+					"chance": 65
+				}],
+
+				"dspecial": [{
+					"name": "shield",
+					"power": 4,
+					"chance": 80
+				}, {
+					"name": "Flurry Rush",
+					"power": 14,
+					"chance": 20
+				}]
+			},
+			"Maxed": {
+				"health": 240,
+				"speed": 30,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Urbosa's Fury",
+					"power": 110,
+					"chance": 25
+				}, {
+					"name": "Ancient Bow",
+					"power": 300,
+					"chance": 5
+				}, {
+					"name": "Master Sword",
+					"power": 45,
+					"chance": 65
+				}],
+
+				"dspecial": [{
+					"name": "shield",
+					"power": 35,
+					"chance": 50
+				}, {
+					"name": "Flurry Rush",
+					"power": 65,
+					"chance": 20
+				}, {
+					"name": "Daruk's Protection",
+					"power": 50,
+					"chance": 30
+				}]
+			}
+		}
+	},
+
+	"Chrono Trigger": {
+		"Crono": {
+			"base": {
+				"health": 70,
+				"speed": 40,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Wind Slash",
+					"power": 35,
+					"chance": 25
+				}, {
+					"name": "Cyclone",
+					"power": 30,
+					"chance": 25
+				}, {
+					"name": "Sword Slash",
+					"power": 15,
+					"chance": 50
+				}],
+
+				"dspecial": [{
+					"name": "No defense",
+					"power": 0,
+					"chance": 85
+				}, {
+					"name": "Dodge",
+					"power": 35,
+					"chance": 15
+				}]
+			},
+			"Maxed": {
+				"health": 210,
+				"speed": 40,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Dreemseeker",
+					"power": 80,
+					"chance": 70
+				}, {
+					"name": "Luminare",
+					"power": 120,
+					"chance": 10
+				}, {
+					"name": "Frenzy",
+					"power": 100,
+					"chance": 20
+				}],
+
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 10
+				}, {
+					"name": "Armor Plate",
+					"power": 25,
+					"chance": 60
+				}, {
+					"name": "Dodge",
+					"power": 55,
+					"chance": 30
+				}]
+			}
+		}
+	},
+
+	"Halo": {
+		"Master Chief": {
+			"Base": {
+				"health": 80,
+				"speed": 25,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Pistol",
+					"power": 20,
+					"chance": 60
+				}, {
+					"name": "M6 Magnum",
+					"power": 25,
+					"chance": 40
+				}],
+
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 60
+				}, {
+					"name": "Armor",
+					"power": 15,
+					"chance": 40
+				}]
+			},
+			"Maxed": {
+				"health": 120,
+				"speed": 28,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Energy Sword",
+					"power": 50,
+					"chance": 30
+				}, {
+					"name": "M6 Magnum",
+					"power": 35,
+					"chance": 70
+				}],
+
+				"dspecial": [{
+					"name": "Armor",
+					"power": 20,
+					"chance": 60
+				}, {
+					"name": "Bubble Shield",
+					"power": 35,
+					"chance": 40
+				}]
+			}
+		}
+	},
+
+	"Sonic": {
+		"Sonic": {
+			"base": {
+				"health": 65,
+				"speed": 100,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Homing Attack",
+					"power": 30,
+					"chance": 50
+				}, {
+					"name": "Sonic Wind",
+					"power": 45,
+					"chance": 25
+				}, {
+					"name": "Stomp",
+					"power": 35,
+					"chance": 25
+				}],
+
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 15
+				}, {
+					"name": "Evade",
+					"power": 35,
+					"chance": 50
+				}, {
+					"name": "Boost",
+					"power": 40,
+					"chance": 35
+				}]
+			}
+		},
+		"Shadow": {
+			"base": {
+				"health": 75,
+				"speed": 95,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Chaos Spear",
+					"power": 25,
+					"chance": 50
+				}, {
+					"name": "Chaos Blast",
+					"power": 40,
+					"chance": 30
+				}, {
+					"name": "Chaos Control",
+					"power": 60,
+					"chance": 20
+				}],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 10
+				}, {
+					"name": "Chaos Control",
+					"power": 55,
+					"chance": 15
+				}, {
+					"name": "Evade",
+					"power": 30,
+					"chance": 45
+				}, {
+					"name": "Guard",
+					"power": 25,
+					"chance": 30
+				}]
+			}
+		},
+		"Chaos": {
+			"Base": {
+				"health": 80,
+				"speed": 50,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Chaos Strike",
+					"power": 35,
+					"chance": 50
+				}, {
+					"name": "WaterFall",
+					"power": 55,
+					"chance": 20
+				}, {
+					"name": "C.Double Stab",
+					"power": 45,
+					"chance": 30
+				}],
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 20
+				}, {
+					"name": "Chaos Guard",
+					"power": 30,
+					"chance": 40
+				}, {
+					"name": "Liquid Sidestep",
+					"power": 40,
+					"chance": 40
+				}]
+			}
+		}
+	},
+
+	"Devil May Cry": {
+		"Dante": {
+			"Base": {
+				"health": 120,
+				"speed": 65,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Rebellion Combo",
+					"power": 50,
+					"chance": 40
+				}, {
+					"name": "Ebony and Ivory",
+					"power": 25,
+					"chance": 15
+				}, {
+					"name": "Stinger",
+					"power": 35,
+					"chance": 45
+				}],
+
+				"dspecial": [{
+					"name": "Royal Guard",
+					"power": 45,
+					"chance": 35
+				}, {
+					"name": "Trickster Dash",
+					"power": 30,
+					"chance": 65
+				}]
+			}
+		},
+		"Vergil": {
+			"Base": {
+				"health": 130,
+				"speed": 60,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Lunar Phase",
+					"power": 45,
+					"chance": 30
+				}, {
+					"name": "Summoned Swords",
+					"power": 30,
+					"chance": 45
+				}, {
+					"name": "Judgement Cut",
+					"power": 55,
+					"chance": 15
+				}],
+
+				"dspecial": [{
+					"name": "Trick",
+					"power": 30,
+					"chance": 35
+				}, {
+					"name": "Block",
+					"power": 15,
+					"chance": 65
+				}]
+			}
+		},
+		"Nero": {
+			"Base": {
+				"health": 100,
+				"speed": 50,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Red Queen",
+					"power": 40,
+					"chance": 40
+				}, {
+					"name": "Blue Rose C.Shot",
+					"power": 35,
+					"chance": 20
+				}, {
+					"name": "Buster",
+					"power": 50,
+					"chance": 40
+				}],
+
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 20
+				}, {
+					"name": "Shuffle",
+					"power": 30,
+					"chance": 25
+				}, {
+					"name": "Buster",
+					"power": 35,
+					"chance": 60
+				}, {
+					"name": "Parry",
+					"power": 40,
+					"chance": 5
+				}]
+			}
+		}
+	},
+
+	"Bayonetta": {
+		"Bayonetta": {
+			"Base": {
+				"health": 110,
+				"speed": 35,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "Wicked Weeves",
+					"power": 60,
+					"chance": 20
+				}, {
+					"name": "Bullet Climax",
+					"power": 30,
+					"chance": 40
+				}, {
+					"name": "Witch Twist ABK",
+					"power": 45,
+					"chance": 40
+				}],
+
+				"dspecial": [{
+					"name": "Witch Time",
+					"power": 50,
+					"chance": 30
+				}, {
+					"name": "Bat Within",
+					"power": 35,
+					"chance": 50
+				}, {
+					"name": "No Defense",
+					"power": 0,
+					"chance": 20
+				}]
+			}
+		}
+	}
 }
