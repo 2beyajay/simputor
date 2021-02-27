@@ -5,60 +5,6 @@ body {
   padding-bottom: 50vh;
 }
 
-#wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
-  width: 75%;
-  min-width: 500px;
-  min-height: 350px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-#wrapper .list {
-  overflow-y: auto;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-  color: white;
-  border: 2px white solid;
-}
-
-#wrapper .list .selected {
-  border: none;
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  color: black;
-}
-
-#wrapper .list .character {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 5px;
-}
-
-#wrapper .list .character:hover {
-  border: white 3px solid;
-  cursor: pointer;
-}
-
-#wrapper .list .character img {
-  width: 64px;
-  height: 64px;
-  border: white 2px solid;
-  border-radius: 10px;
-}
-
-#wrapper .list .character p {
-  -webkit-box-flex: 8;
-      -ms-flex-positive: 8;
-          flex-grow: 8;
-  margin-left: 15px;
-  font-size: 1.25rem;
-}
-
 .speedToolDiv {
   position: fixed;
   top: 0;
