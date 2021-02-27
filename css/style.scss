@@ -3,13 +3,14 @@ body {
     background-color: black;
     color: white;
     font-family: sans-serif;
+		padding-bottom: 50vh;
 
     #wrapper {
         display: flex;
         margin: auto;
         width: 75%;
         min-width: 500px;
-        height: 40vh;
+        // height: 40vh;
         min-height: 350px;
         justify-content: space-around;
 
@@ -74,14 +75,21 @@ body {
         }
     }
 
+
+		#as-it-happens-heading{
+			margin-top: 2em;
+			text-align: center;
+			border-bottom: 5px solid #5c839c;
+		}
+
     #logs {
         margin: auto;
+				margin-top: 2em;
         padding: 25px;
         width: 75%;
         min-width: 500px;
         background-color: #f5f7fa;
         color: black;
-
     }
 }
 
