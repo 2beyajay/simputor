@@ -18,12 +18,16 @@ let ref = firebase.database().ref('/');
 
 
 
-// let select0 = document.querySelector('#select0');
-// let select1 = document.querySelector('#select1');
+let franchiceUL0 = document.querySelector('.selection-sect #p0')
+let franchiceUL1 = document.querySelector('.selection-sect #p1')
+
 let submit = document.querySelector('#submit button');
-let player0NameHtml = document.querySelector('.showSelection .player1Name')
-let player1NameHtml = document.querySelector('.showSelection .player2Name')
+
+let player0NameHtml = document.querySelectorAll('.showSelection .player1Name')
+let player1NameHtml = document.querySelectorAll('.showSelection .player2Name')
+
 let logs = document.querySelector('#logs');
+
 
 let player0, player1, fighter0, fighter1;
 
@@ -46,14 +50,7 @@ const timer = ms => new Promise(res => setTimeout(res, ms))
 
 
 
-
-// trying out the new layout
-let franchiceUL0 = document.querySelector('.selection-sect #p0')
-let franchiceUL1 = document.querySelector('.selection-sect #p1')
-
-
-
-
+// fetching data to populate character list
 ref.once('value', (snapshot) => {
 	let allData;
 	allData = snapshot.val();
@@ -142,54 +139,6 @@ ref.once('value', (snapshot) => {
 	let p1Forms = document.querySelectorAll('#p1 .form-div');
 
 
-	/* for (const franchises in allData) {
-		// getting the franchise names
-		let franchiseLi = document.createElement('li');
-		franchiseLi.classList.add('oneFranchise');
-		let franchiseA = document.createElement('a'); //creating the franchise anchor
-		franchiseA.href = "#";
-		franchiseA.innerText = franchises; //setting the anchor text
-		franchiseLi.appendChild(franchiseA);
-		// 
-
-		let characterUl = document.createElement('ul'); //creating the character UL
-		franchiseLi.appendChild(characterUl);
-		characterUl.classList.add('vertical', 'nested', 'menu');
-
-		let characters = allData[franchises];
-		for (const chars in characters) {
-			// getting the character names
-			let characterLi = document.createElement('li');
-			characterLi.classList.add('oneCharacter');
-			characterUl.appendChild(characterLi);
-
-			let characterA = document.createElement('a'); //creating the character anchor
-			characterA.href = "#";
-			characterA.innerText = chars;
-			characterLi.appendChild(characterA);
-
-			let formUl = document.createElement('ul');
-			formUl.classList.add('vertical', 'nested', 'menu');
-			characterLi.appendChild(formUl);
-
-			let forms = characters[chars];
-			for (const frms in forms) {
-				let oneFormContent = `<li class="oneForm" data-franchise="${franchises}" data-character="${chars}" data-form="${frms}">
-																<a href="#">${frms}</a>
-															</li>`
-				formUl.innerHTML += oneFormContent;
-			}
-		}
-
-		select0.appendChild(franchiseLi);
-	} 
-
-	select1.innerHTML = select0.innerHTML;
-	*/
-
-	// let p0Forms = document.querySelectorAll('#select0 .oneForm');
-	// let p1Forms = document.querySelectorAll('#select1 .oneForm');
-
 	p0Forms.forEach(form => {
 		form.addEventListener('click', (e) => {
 			let player0ref = firebase.database().ref(form.dataset.franchise + '/' + form.dataset.character + '/' + form.dataset.form);
@@ -198,7 +147,11 @@ ref.once('value', (snapshot) => {
 				fighter0 = player0data.val();
 				fighter0.name = `${form.dataset.character}(${form.dataset.form})`;
 				console.log('player 1:' + fighter0.name);
-				player0NameHtml.innerText = fighter0.name
+
+				// showing the selected name in html
+				player0NameHtml.forEach(element => {
+					element.innerHTML = fighter0.name;
+				});
 			})
 		})
 	});
@@ -211,7 +164,11 @@ ref.once('value', (snapshot) => {
 				fighter1 = player1data.val();
 				fighter1.name = `${form.dataset.character}(${form.dataset.form})`;
 				console.log('player 2:' + fighter1.name);
-				player1NameHtml.innerText = fighter1.name
+				
+				// showing the selected name in html
+				player1NameHtml.forEach(element => {
+					element.innerHTML = fighter1.name;
+				});
 			})
 		})
 	});
