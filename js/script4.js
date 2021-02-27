@@ -61,6 +61,21 @@ ref.once('value', (snapshot) => {
 	for (const franchises in allData) {
 		// getting the franchise names
 		let franchiseLi = document.createElement('li');
+		franchiseLi.classList.add('franchise-li');
+		let franchiseAnchor = document.createElement('a'); //creating the franchise anchor
+		franchiseAnchor.href = "#";
+		franchiseAnchor.innerText = franchises; //setting the anchor text
+		franchiseLi.appendChild(franchiseAnchor);
+	}
+
+
+
+
+
+
+	for (const franchises in allData) {
+		// getting the franchise names
+		let franchiseLi = document.createElement('li');
 		franchiseLi.classList.add('oneFranchise');
 		let franchiseA = document.createElement('a'); //creating the franchise anchor
 		franchiseA.href = "#";
