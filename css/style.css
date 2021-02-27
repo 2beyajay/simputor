@@ -5,7 +5,7 @@ body {
   padding-bottom: 50vh;
 }
 
-body #wrapper {
+#wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,7 +17,7 @@ body #wrapper {
       justify-content: space-around;
 }
 
-body #wrapper #submit {
+#wrapper #submit {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -34,7 +34,7 @@ body #wrapper #submit {
   padding: 20px;
 }
 
-body #wrapper #submit button {
+#wrapper #submit button {
   font-size: 1.5rem;
   background-color: #8BC6EC;
   background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
@@ -44,12 +44,12 @@ body #wrapper #submit button {
   cursor: pointer;
 }
 
-body #wrapper #submit button:hover {
+#wrapper #submit button:hover {
   -webkit-transform: scale(1.015);
           transform: scale(1.015);
 }
 
-body #wrapper .list {
+#wrapper .list {
   overflow-y: auto;
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
@@ -58,32 +58,32 @@ body #wrapper .list {
   border: 2px white solid;
 }
 
-body #wrapper .list .selected {
+#wrapper .list .selected {
   border: none;
   background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   color: black;
 }
 
-body #wrapper .list .character {
+#wrapper .list .character {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 5px;
 }
 
-body #wrapper .list .character:hover {
+#wrapper .list .character:hover {
   border: white 3px solid;
   cursor: pointer;
 }
 
-body #wrapper .list .character img {
+#wrapper .list .character img {
   width: 64px;
   height: 64px;
   border: white 2px solid;
   border-radius: 10px;
 }
 
-body #wrapper .list .character p {
+#wrapper .list .character p {
   -webkit-box-flex: 8;
       -ms-flex-positive: 8;
           flex-grow: 8;
@@ -91,13 +91,14 @@ body #wrapper .list .character p {
   font-size: 1.25rem;
 }
 
-body #as-it-happens-heading, body #demo-heading {
+#as-it-happens-heading,
+#demo-heading {
   margin-top: 1em;
   text-align: center;
   border-bottom: 5px solid #5c839c;
 }
 
-body #logs {
+#logs {
   margin: auto;
   margin-top: 2em;
   padding: 25px;
@@ -107,17 +108,17 @@ body #logs {
   color: black;
 }
 
-body #logs p {
+#logs p {
   padding: 1em;
   border-radius: 10px;
   color: white;
 }
 
-body #logs p:nth-child(2n) {
+#logs p:nth-child(2n) {
   background-color: #600094;
 }
 
-body #logs p:nth-child(2n+1) {
+#logs p:nth-child(2n+1) {
   background-color: #769400;
 }
 
