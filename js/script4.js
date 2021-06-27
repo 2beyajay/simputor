@@ -205,10 +205,15 @@ async function init() {
 			player1 = new Fighter(fighter1);
 			fighters = [player0, player1]
 
+			let fighterPictures = document.querySelector(".fighter-pictures")
+
 			let fighterPicture0 = document.querySelector(".fighter-pictures .zero")
-			fighterPicture0.src = fighter0.imgURL
+			// fighterPicture0.src = fighter0.imgURL
 			let fighterPicture1 = document.querySelector(".fighter-pictures .one")
-			fighterPicture1.src = fighter1.imgURL
+			// fighterPicture1.src = fighter1.imgURL
+
+			fighterPictures.style.display = "flex";
+
 
 
 			/* ******* starting the fight sequence ********* */
