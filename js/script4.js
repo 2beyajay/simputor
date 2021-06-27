@@ -103,6 +103,7 @@ ref.once('value', (snapshot) => {
 
 			let forms = characters[chars];
 			for (const frms in forms) {
+
 				let formDiv = document.createElement('div');
 				formDiv.classList.add('form-div');
 				formDiv.setAttribute('data-franchise', franchises);
@@ -120,11 +121,23 @@ ref.once('value', (snapshot) => {
 				formDiv.appendChild(formTitle);
 
 
-				// append stats p here
-					//
-					//
-					//
-					// 
+				// working on showing stats
+				let formStatsDiv = document.createElement('div');
+				formStatsDiv.className = "formStatsDiv"
+				formStatsDiv.innerHTML = 
+				`<div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">${forms[frms].health}</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">${forms[frms].speed}</p>
+					</div>
+				</div>`
+
+				formDiv.appendChild(formStatsDiv)
+
 			}
 		}
 
@@ -192,6 +205,11 @@ async function init() {
 			player1 = new Fighter(fighter1);
 			fighters = [player0, player1]
 
+			let fighterPicture0 = document.querySelector(".fighter-pictures .zero")
+			fighterPicture0.src = fighter0.imgURL
+			let fighterPicture1 = document.querySelector(".fighter-pictures .one")
+			fighterPicture1.src = fighter1.imgURL
+
 
 			/* ******* starting the fight sequence ********* */
 			fight(player0, player1);
@@ -244,21 +262,49 @@ async function fight(player0, player1) {
 			fighters[1 - whoseTurn].health -= movePower
 			console.log(`${fighters[1 - whoseTurn].name} damaged by ${moveName} and now at ${fighters[1 - whoseTurn].health} \n`);
 
-			logs.innerHTML += `<p>${fighters[1 - whoseTurn].name} damaged by ${moveName} and now at ${fighters[1 - whoseTurn].health} \n</p>`
+			logs.innerHTML += 
+			`<p>
+				<span class="character-name">${fighters[1 - whoseTurn].name}</span> 
+				damaged by 
+				<span class="atk-move">${moveName}</span> 
+				and now at 
+				<span class="hp">${fighters[1 - whoseTurn].health}</span> \n
+			</p>`
 		} else {
 			// simple defense
 			if (defensePower < movePower) {
 				fighters[1 - whoseTurn].health -= (movePower - defensePower)
 				console.log(`${fighters[1 - whoseTurn].name} reduced ${moveName} by ${defensePower} with ${defenseName} and now at ${fighters[1 - whoseTurn].health} \n`);
 
-				logs.innerHTML += `<p>${fighters[1 - whoseTurn].name} reduced ${moveName} by ${defensePower} with ${defenseName} and now at ${fighters[1 - whoseTurn].health} \n</p>`;
+				logs.innerHTML += 
+				`<p>
+					<span class="character-name">${fighters[1 - whoseTurn].name}</span> 
+					reduced 
+					<span class="atk-move">${moveName}</span> 
+					by 
+					<span class="number">${defensePower}</span> 
+					with 
+					<span class="def-move">${defenseName}</span> 
+					and now at 
+					<span class="hp">${fighters[1 - whoseTurn].health}</span> \n
+				</p>`;
 			}
 			// counter
 			else {
 				fighters[whoseTurn].health -= defensePower;
 				console.log(`${fighters[1 - whoseTurn].name} countered ${moveName} with ${defenseName} and did ${defensePower} damage`);
 
-				logs.innerHTML += `<p>${fighters[1 - whoseTurn].name} countered ${moveName} with ${defenseName} and did ${defensePower} damage</p>`;
+				logs.innerHTML += `
+				<p>
+					<span	class="character-name">${fighters[1 - whoseTurn].name}</span> 
+					<span class="counter">countered</span> 
+					<span class="atk-move">${moveName}</span> 
+					with 
+					<span class="def-move">${defenseName}</span> 
+					and did 
+					<span class="number">${defensePower}</span> 
+					damage
+				</p>`;
 			}
 		}
 
@@ -268,12 +314,12 @@ async function fight(player0, player1) {
 		// sending the death and winner message
 		if (player0.health <= 0) {
 			console.log(`${player0.name} died. The winner is ${player1.name}`);
-			logs.innerHTML += `<p>${player0.name} died. The winner is ${player1.name}</p>`
+			logs.innerHTML += `<p class="win">${player0.name} died. The winner is ${player1.name}</p>`
 		}
 		if (player1.health <= 0) {
 			console.log(`${player1.name} died. The winner is ${player0.name}`);
 
-			logs.innerHTML += `<p>${player1.name} died. The winner is ${player0.name}</p>`
+			logs.innerHTML += `<p class="win">${player1.name} died. The winner is ${player0.name}</p>`
 		}
 
 		// delay for the next turn

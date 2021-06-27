@@ -87,27 +87,67 @@ header{
   border-bottom: 5px solid #c78100;
 }
 
+.fighter-pictures{
+	margin: auto;
+	padding-top: 2em;
+	display: flex;
+	width: 60%;
+	justify-content: space-between;
+
+	align-items: center;
+
+	img{
+		width: 150px;
+	}
+}
+
 #logs {
   margin: auto;
   margin-top: 2em;
   padding: 25px;
-  width: 75%;
+  width: 60%;
   min-width: 500px;
   color: black;
+	display: flex;
+	flex-direction: column;
 
   p {
     padding: 1em;
     border-radius: 10px;
     color: white;
+		width: 70%;
+		min-width: 250px;
   }
 
   p:nth-child(2n) {
-    background-color: #600094;
+    // background-color: #60009475;
+    box-shadow: 0px 0px 10px #600094;
+		align-self: flex-start;
+
+		.character-name{
+			color: #a600ff;
+		}
   }
 
   p:nth-child(2n + 1) {
-    background-color: #769400;
+    // background-color: #76940056;
+    box-shadow: 0px 0px 10px #769400;
+		align-self: flex-end;
+
+		.character-name{
+			color: #9bc200;
+		}
   }
+
+	.win{
+		background-color: #c78100;
+		width: 100%;
+		margin-top: 2em;
+		box-shadow: 0px 0px 50px #c78100 !important;
+		text-align: center;
+		font-size: 1.5em;
+	}
+
 }
 
 .showSelection {
@@ -116,6 +156,7 @@ header{
   width: 75%;
   min-width: 500px;
   justify-content: space-between;
+	font-size: 1.5em;
 }
 
 .selection-sect,
@@ -131,6 +172,13 @@ header{
       display: flex;
       align-items: center;
       gap: 15px;
+
+			.formStatsDiv{
+				flex-grow: 2;
+				display: flex;
+				justify-content: space-around;
+
+			}
 
       p {
         margin-bottom: 0;

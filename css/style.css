@@ -86,27 +86,79 @@ header h1 {
   border-bottom: 5px solid #c78100;
 }
 
+.fighter-pictures {
+  margin: auto;
+  padding-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fighter-pictures img {
+  width: 150px;
+}
+
 #logs {
   margin: auto;
   margin-top: 2em;
   padding: 25px;
-  width: 75%;
+  width: 60%;
   min-width: 500px;
   color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #logs p {
   padding: 1em;
   border-radius: 10px;
   color: white;
+  width: 70%;
+  min-width: 250px;
 }
 
 #logs p:nth-child(2n) {
-  background-color: #600094;
+  -webkit-box-shadow: 0px 0px 10px #600094;
+          box-shadow: 0px 0px 10px #600094;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#logs p:nth-child(2n) .character-name {
+  color: #a600ff;
 }
 
 #logs p:nth-child(2n + 1) {
-  background-color: #769400;
+  -webkit-box-shadow: 0px 0px 10px #769400;
+          box-shadow: 0px 0px 10px #769400;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#logs p:nth-child(2n + 1) .character-name {
+  color: #9bc200;
+}
+
+#logs .win {
+  background-color: #c78100;
+  width: 100%;
+  margin-top: 2em;
+  -webkit-box-shadow: 0px 0px 50px #c78100 !important;
+          box-shadow: 0px 0px 50px #c78100 !important;
+  text-align: center;
+  font-size: 1.5em;
 }
 
 .showSelection {
@@ -119,6 +171,7 @@ header h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-size: 1.5em;
 }
 
 .selection-sect,
@@ -146,6 +199,18 @@ header h1 {
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
+}
+
+.selection-sect .franchise-accordion .form-div .formStatsDiv,
+.selection-sect-old .franchise-accordion .form-div .formStatsDiv {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .selection-sect .franchise-accordion .form-div p,
