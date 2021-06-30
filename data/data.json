@@ -4,7 +4,7 @@
 			"base": {
 				"health": 100,
 				"speed": 30,
-				"imgURL": "imageURl.com",
+				"imgURL": "Dragon ball/Goku/base",
 				"ospecial": [{
 					"name": "melee",
 					"power": 15,
@@ -32,7 +32,7 @@
 			"super saiyan 1": {
 				"health": 2000,
 				"speed": 200,
-				"imgURL": "imageURl.com",
+				"imgURL": "Dragon ball/Goku/super saiyan 1",
 				"ospecial": [{
 					"name": "melee",
 					"power": 100,
@@ -62,7 +62,7 @@
 			"base": {
 				"health": 95,
 				"speed": 40,
-				"imgURL": "imageURl.com",
+				"imgURL": "Dragon ball/Vegeta/base",
 				"ospecial": [{
 					"name": "melee",
 					"power": 10,
@@ -90,7 +90,7 @@
 			"super saiyan 1": {
 				"health": 2000,
 				"speed": 200,
-				"imgURL": "imageURl.com",
+				"imgURL": "Dragon ball/Vegeta/super saiyan 1",
 				"ospecial": [{
 					"name": "melee",
 					"power": 100,
@@ -178,30 +178,28 @@
 		},
 		"Gohan": {
 			"Kid Gohan": {
-				"base": {
-					"health": 50,
-					"speed": 24,
-					"imgURL": "imageURl.com",
-					"ospecial": [{
-						"name": "melee",
-						"power": 10,
-						"chance": 45
-					}, {
-						"name": "Masenko",
-						"power": 30,
-						"chance": 55
-					}],
+				"health": 50,
+				"speed": 24,
+				"imgURL": "imageURl.com",
+				"ospecial": [{
+					"name": "melee",
+					"power": 10,
+					"chance": 45
+				}, {
+					"name": "Masenko",
+					"power": 30,
+					"chance": 55
+				}],
 
-					"dspecial": [{
-						"name": "No Defence",
-						"power": 0,
-						"chance": 40
-					}, {
-						"name": "dodge",
-						"power": 20,
-						"chance": 60
-					}]
-				}
+				"dspecial": [{
+					"name": "No Defence",
+					"power": 0,
+					"chance": 40
+				}, {
+					"name": "dodge",
+					"power": 20,
+					"chance": 60
+				}]
 			}
 		}
 	},

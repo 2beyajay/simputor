@@ -112,8 +112,14 @@ ref.once('value', (snapshot) => {
 				formsAccordionDiv.appendChild(formDiv);
 
 				let formIconImg = document.createElement('img');
-				formIconImg.setAttribute('src', 'https://via.placeholder.com/50')
+
+				formIconImg.setAttribute('src', 
+					(imageExists(`../img/franchises/${franchises}/${chars}/${frms}.png`) ? `../img/franchises/${franchises}/${chars}/${frms}.png` : 'https://via.placeholder.com/50')
+				)
+
+
 				formIconImg.setAttribute('alt', `${franchises} -> ${chars} -> ${frms}`)
+				formIconImg.className = "form-selection-icon"
 				formDiv.appendChild(formIconImg);
 
 				let formTitle = document.createElement('p'); //creating the franchise anchor
@@ -205,12 +211,19 @@ async function init() {
 			player1 = new Fighter(fighter1);
 			fighters = [player0, player1]
 
+			console.log(player0);
+
 			let fighterPictures = document.querySelector(".fighter-pictures")
 
 			let fighterPicture0 = document.querySelector(".fighter-pictures .zero")
 			// fighterPicture0.src = fighter0.imgURL
 			let fighterPicture1 = document.querySelector(".fighter-pictures .one")
 			// fighterPicture1.src = fighter1.imgURL
+
+			fighterPicture0.src = (imageExists(`../img/franchises/${fighter0.imgURL}.png`) ? `../img/franchises/${fighter0.imgURL}.png` : 'https://via.placeholder.com/150')
+			
+			fighterPicture1.src = (imageExists(`../img/franchises/${fighter1.imgURL}.png`) ? `../img/franchises/${fighter1.imgURL}.png` : 'https://via.placeholder.com/150')
+
 
 			fighterPictures.style.display = "flex";
 
@@ -395,4 +408,16 @@ class Fighter {
 			}
 		}
 	}
+}
+
+// checking if image exists, if not, returning false(404) and using placeholder image
+function imageExists(image_url){
+
+	var http = new XMLHttpRequest();
+
+	http.open('HEAD', image_url, false);
+	http.send();
+
+	return http.status != 404;
+
 }

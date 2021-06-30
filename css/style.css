@@ -47,6 +47,10 @@ header h1 {
   border-bottom-right-radius: 100px;
 }
 
+.selection-sect .franchise-accordion .form-div .form-selection-icon {
+  width: 75px;
+}
+
 .selection-sect .franchise-accordion .form-div p {
   font-weight: bold;
   color: #c78100;
