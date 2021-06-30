@@ -116,11 +116,11 @@
 				}]
 			}
 		},
-		"krillin": {
+		"Krillin": {
 			"Base": {
 				"health": 50,
 				"speed": 23,
-				"imgURL": "Dragon Ball/krillin/Base",
+				"imgURL": "Dragon Ball/Krillin/Base",
 				"ospecial": [{
 					"name": "melee",
 					"power": 15,

@@ -1,3 +1,13 @@
+@keyframes glow {
+	from {
+		box-shadow: 0 0 10px -10px #c78100;
+	}
+	to {
+		box-shadow: 0 0 10px 10px #c78100;
+	}
+}
+
+
 body {
   background-color: black;
   color: white;
@@ -49,6 +59,7 @@ header{
 			.form-selection-icon{
 				width: auto;
 				max-height: 75px;
+				border-radius: 5%;
 			}
 
       p {
@@ -104,9 +115,14 @@ header{
 
 	img{
 		width: 150px;
+		border-radius: 5%;
+	}
+
+	.winner{
+		animation: glow 0.5s infinite alternate ease-out;
+		
 	}
 }
-
 #logs {
   margin: auto;
   margin-top: 2em;

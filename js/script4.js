@@ -25,6 +25,10 @@ let submit = document.querySelector('#submit button');
 let player0NameHtml = document.querySelectorAll('.showSelection .player1Name')
 let player1NameHtml = document.querySelectorAll('.showSelection .player2Name')
 
+let fighterPictures = document.querySelector(".fighter-pictures")
+let fighterPicture0 = document.querySelector(".fighter-pictures .zero")
+let fighterPicture1 = document.querySelector(".fighter-pictures .one")
+
 let logs = document.querySelector('#logs');
 
 
@@ -207,25 +211,17 @@ async function init() {
 		} else {
 
 			logs.innerHTML = '';
+			fighterPicture0.classList.remove('winner', 'loser')
+			fighterPicture1.classList.remove('winner', 'loser')
 
 			player0 = new Fighter(fighter0);
 			player1 = new Fighter(fighter1);
 			fighters = [player0, player1]
 
-			let fighterPictures = document.querySelector(".fighter-pictures")
 
-			let fighterPicture0 = document.querySelector(".fighter-pictures .zero")
-			// fighterPicture0.src = fighter0.imgURL
-			let fighterPicture1 = document.querySelector(".fighter-pictures .one")
-			// fighterPicture1.src = fighter1.imgURL
-
-			let img0 = encodeURI(`${imagePathPrefix}/${fighter0.imgURL}.png`)
-			let img1 = encodeURI(`${imagePathPrefix}/${fighter1.imgURL}.png`)
-
-			fighterPicture0.src = imageExists(img0) ? img0 : 'https://via.placeholder.com/150'
+			fighterPicture0.src = imageExists(`js/img/franchises/${fighter0.imgURL}.png`) ? `js/img/franchises/${fighter0.imgURL}.png` : 'https://via.placeholder.com/150'
 			
-			fighterPicture1.src = imageExists(img1) ? img1 : 'https://via.placeholder.com/150'
-
+			fighterPicture1.src = imageExists(`js/img/franchises/${fighter1.imgURL}.png`) ? `js/img/franchises/${fighter1.imgURL}.png` : 'https://via.placeholder.com/150'
 
 			fighterPictures.style.display = "flex";
 
@@ -336,10 +332,18 @@ async function fight(player0, player1) {
 			// console.log(`${player0.name} died. The winner is ${player1.name}`);
 			logs.innerHTML += `<p class="win">${player0.name} died. The winner is ${player1.name}</p>`
 
+			// adding the glow class to the winner
+			fighterPicture1.classList.add("winner")
+			fighterPicture0.classList.add("loser")
+			
 		}
 		if (player1.health <= 0) {
 			// console.log(`${player1.name} died. The winner is ${player0.name}`);
 			logs.innerHTML += `<p class="win">${player1.name} died. The winner is ${player0.name}</p>`
+			
+			// adding the glow class to the winner
+			fighterPicture0.classList.add("winner")
+			fighterPicture1.classList.add("loser")
 			
 		}
 

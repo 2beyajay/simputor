@@ -1,3 +1,25 @@
+@-webkit-keyframes glow {
+  from {
+    -webkit-box-shadow: 0 0 10px -10px #c78100;
+            box-shadow: 0 0 10px -10px #c78100;
+  }
+  to {
+    -webkit-box-shadow: 0 0 10px 10px #c78100;
+            box-shadow: 0 0 10px 10px #c78100;
+  }
+}
+
+@keyframes glow {
+  from {
+    -webkit-box-shadow: 0 0 10px -10px #c78100;
+            box-shadow: 0 0 10px -10px #c78100;
+  }
+  to {
+    -webkit-box-shadow: 0 0 10px 10px #c78100;
+            box-shadow: 0 0 10px 10px #c78100;
+  }
+}
+
 body {
   background-color: black;
   color: white;
@@ -50,6 +72,7 @@ header h1 {
 .selection-sect .franchise-accordion .form-div .form-selection-icon {
   width: auto;
   max-height: 75px;
+  border-radius: 5%;
 }
 
 .selection-sect .franchise-accordion .form-div p {
@@ -107,6 +130,12 @@ header h1 {
 
 .fighter-pictures img {
   width: 150px;
+  border-radius: 5%;
+}
+
+.fighter-pictures .winner {
+  -webkit-animation: glow 0.5s infinite alternate ease-out;
+          animation: glow 0.5s infinite alternate ease-out;
 }
 
 #logs {

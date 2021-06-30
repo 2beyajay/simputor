@@ -1,0 +1,673 @@
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simputor</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+
+<meta class="foundation-mq"></head>
+
+<body cz-shortcut-listen="true">
+
+
+	<!-- controls for the speed of the simulation -->
+	<div class="speedToolDiv">
+		<input type="range" id="clock" name="clock" min="0.5" max="3" step="0.5" value="1">
+		<h5>Speed: x<span id="clockValue">1</span></h5>
+	</div>
+
+
+	<!-- main heading -->
+	<header>
+		<h1>wELcoMe TO simPuTOR</h1>
+	</header>
+
+
+	<!-- character selection names -->
+	<div class="showSelection">
+		<p>player 1: <span class="player1Name">Eren Yeager(Attack Titan)</span></p>
+		<p>player 2: <span class="player2Name">Levi Ackerman(Base)</span></p>
+	</div>
+
+
+	<!-- character selection section -->
+	<section class="selection-sect">
+		<ul class="accordion franchise-accordion" id="p0" data-accordion="iijb2f-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist">
+		<li class="franchises-li accordion-item is-active" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="g2v7de-accordion" role="tab" id="g2v7de-accordion-label" aria-expanded="true" aria-selected="true">Attack on Titan</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="g2v7de-accordion-label" aria-hidden="false" id="g2v7de-accordion" style="display: block;"><ul class="accordion characters-accordion" data-accordion="bhsd42-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item is-active" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="2s20fs-accordion" role="tab" id="2s20fs-accordion-label" aria-expanded="true" aria-selected="true">Eren Yeager</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="2s20fs-accordion-label" aria-hidden="false" id="2s20fs-accordion" style="display: block;"><div class="form-div" data-franchise="Attack on Titan" data-character="Eren Yeager" data-form="Attack Titan"><img src="js/img/franchises/Attack%20on%20Titan/Eren%20Yeager/Attack%20Titan.png" alt="Attack on Titan -> Eren Yeager -> Attack Titan" class="form-selection-icon"><p>Attack Titan</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">300</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">20</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="hdssof-accordion" role="tab" id="hdssof-accordion-label" aria-expanded="false" aria-selected="false">Levi Ackerman</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="hdssof-accordion-label" aria-hidden="true" id="hdssof-accordion"><div class="form-div" data-franchise="Attack on Titan" data-character="Levi Ackerman" data-form="Base"><img src="js/img/franchises/Attack%20on%20Titan/Levi%20Ackerman/Base.png" alt="Attack on Titan -> Levi Ackerman -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">30</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">50</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="94su5t-accordion" role="tab" id="94su5t-accordion-label" aria-expanded="false" aria-selected="false">Bayonetta</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="94su5t-accordion-label" aria-hidden="true" id="94su5t-accordion"><ul class="accordion characters-accordion" data-accordion="uba90p-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="82mg3z-accordion" role="tab" id="82mg3z-accordion-label" aria-expanded="false" aria-selected="false">Bayonetta</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="82mg3z-accordion-label" aria-hidden="true" id="82mg3z-accordion"><div class="form-div" data-franchise="Bayonetta" data-character="Bayonetta" data-form="Base"><img src="js/img/franchises/Bayonetta/Bayonetta/Base.png" alt="Bayonetta -> Bayonetta -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">110</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">35</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="gg3c5i-accordion" role="tab" id="gg3c5i-accordion-label" aria-expanded="false" aria-selected="false">Chrono Trigger</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="gg3c5i-accordion-label" aria-hidden="true" id="gg3c5i-accordion"><ul class="accordion characters-accordion" data-accordion="n1xzwp-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="fa4kz3-accordion" role="tab" id="fa4kz3-accordion-label" aria-expanded="false" aria-selected="false">Crono</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="fa4kz3-accordion-label" aria-hidden="true" id="fa4kz3-accordion"><div class="form-div" data-franchise="Chrono Trigger" data-character="Crono" data-form="Base"><img src="js/img/franchises/Chrono%20Trigger/Crono/Base.png" alt="Chrono Trigger -> Crono -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">70</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">40</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Chrono Trigger" data-character="Crono" data-form="Maxed"><img src="https://via.placeholder.com/50" alt="Chrono Trigger -> Crono -> Maxed" class="form-selection-icon"><p>Maxed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">210</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">40</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="u8qgq8-accordion" role="tab" id="u8qgq8-accordion-label" aria-expanded="false" aria-selected="false">Devil May Cry</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="u8qgq8-accordion-label" aria-hidden="true" id="u8qgq8-accordion"><ul class="accordion characters-accordion" data-accordion="yl3ggq-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="q03s50-accordion" role="tab" id="q03s50-accordion-label" aria-expanded="false" aria-selected="false">Dante</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="q03s50-accordion-label" aria-hidden="true" id="q03s50-accordion"><div class="form-div" data-franchise="Devil May Cry" data-character="Dante" data-form="Base"><img src="js/img/franchises/Devil%20May%20Cry/Dante/Base.png" alt="Devil May Cry -> Dante -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">120</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">65</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="5zd3wv-accordion" role="tab" id="5zd3wv-accordion-label" aria-expanded="false" aria-selected="false">Nero</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="5zd3wv-accordion-label" aria-hidden="true" id="5zd3wv-accordion"><div class="form-div" data-franchise="Devil May Cry" data-character="Nero" data-form="Base"><img src="js/img/franchises/Devil%20May%20Cry/Nero/Base.png" alt="Devil May Cry -> Nero -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">100</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">50</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="epna1s-accordion" role="tab" id="epna1s-accordion-label" aria-expanded="false" aria-selected="false">Vergil</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="epna1s-accordion-label" aria-hidden="true" id="epna1s-accordion"><div class="form-div" data-franchise="Devil May Cry" data-character="Vergil" data-form="Base"><img src="js/img/franchises/Devil%20May%20Cry/Vergil/Base.png" alt="Devil May Cry -> Vergil -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">130</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">60</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="zfnjqr-accordion" role="tab" id="zfnjqr-accordion-label" aria-expanded="false" aria-selected="false">Dragon Ball</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="zfnjqr-accordion-label" aria-hidden="true" id="zfnjqr-accordion"><ul class="accordion characters-accordion" data-accordion="mx6d5h-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="8si2ri-accordion" role="tab" id="8si2ri-accordion-label" aria-expanded="false" aria-selected="false">Gohan</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="8si2ri-accordion-label" aria-hidden="true" id="8si2ri-accordion"><div class="form-div" data-franchise="Dragon Ball" data-character="Gohan" data-form="Kid Gohan"><img src="js/img/franchises/Dragon%20Ball/Gohan/Kid%20Gohan.png" alt="Dragon Ball -> Gohan -> Kid Gohan" class="form-selection-icon"><p>Kid Gohan</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">50</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">24</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="r7k5ls-accordion" role="tab" id="r7k5ls-accordion-label" aria-expanded="false" aria-selected="false">Goku</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="r7k5ls-accordion-label" aria-hidden="true" id="r7k5ls-accordion"><div class="form-div" data-franchise="Dragon Ball" data-character="Goku" data-form="Base"><img src="js/img/franchises/Dragon%20Ball/Goku/Base.png" alt="Dragon Ball -> Goku -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">100</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">30</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Dragon Ball" data-character="Goku" data-form="super saiyan 1"><img src="https://via.placeholder.com/50" alt="Dragon Ball -> Goku -> super saiyan 1" class="form-selection-icon"><p>super saiyan 1</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">2000</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">200</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="kernd0-accordion" role="tab" id="kernd0-accordion-label" aria-expanded="false" aria-selected="false">Krillin</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="kernd0-accordion-label" aria-hidden="true" id="kernd0-accordion"><div class="form-div" data-franchise="Dragon Ball" data-character="Krillin" data-form="Base"><img src="js/img/franchises/Dragon%20Ball/Krillin/Base.png" alt="Dragon Ball -> Krillin -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">50</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">23</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="0ry3qq-accordion" role="tab" id="0ry3qq-accordion-label" aria-expanded="false" aria-selected="false">Piccolo</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="0ry3qq-accordion-label" aria-hidden="true" id="0ry3qq-accordion"><div class="form-div" data-franchise="Dragon Ball" data-character="Piccolo" data-form="Base"><img src="js/img/franchises/Dragon%20Ball/Piccolo/Base.png" alt="Dragon Ball -> Piccolo -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">110</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">18</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="f14jb9-accordion" role="tab" id="f14jb9-accordion-label" aria-expanded="false" aria-selected="false">Vegeta</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="f14jb9-accordion-label" aria-hidden="true" id="f14jb9-accordion"><div class="form-div" data-franchise="Dragon Ball" data-character="Vegeta" data-form="Base"><img src="js/img/franchises/Dragon%20Ball/Vegeta/Base.png" alt="Dragon Ball -> Vegeta -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">95</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">40</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Dragon Ball" data-character="Vegeta" data-form="super saiyan 1"><img src="https://via.placeholder.com/50" alt="Dragon Ball -> Vegeta -> super saiyan 1" class="form-selection-icon"><p>super saiyan 1</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">2000</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">200</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="9d56ju-accordion" role="tab" id="9d56ju-accordion-label" aria-expanded="false" aria-selected="false">Fullmetal Alchemist</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="9d56ju-accordion-label" aria-hidden="true" id="9d56ju-accordion"><ul class="accordion characters-accordion" data-accordion="fv4kgz-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="ypmne7-accordion" role="tab" id="ypmne7-accordion-label" aria-expanded="false" aria-selected="false">Alphonse Elric</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="ypmne7-accordion-label" aria-hidden="true" id="ypmne7-accordion"><div class="form-div" data-franchise="Fullmetal Alchemist" data-character="Alphonse Elric" data-form="Armoured"><img src="js/img/franchises/Fullmetal%20Alchemist/Alphonse%20Elric/Armoured.png" alt="Fullmetal Alchemist -> Alphonse Elric -> Armoured" class="form-selection-icon"><p>Armoured</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">150</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">10</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="orr79h-accordion" role="tab" id="orr79h-accordion-label" aria-expanded="false" aria-selected="false">Edward Elric</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="orr79h-accordion-label" aria-hidden="true" id="orr79h-accordion"><div class="form-div" data-franchise="Fullmetal Alchemist" data-character="Edward Elric" data-form="Base"><img src="js/img/franchises/Fullmetal%20Alchemist/Edward%20Elric/Base.png" alt="Fullmetal Alchemist -> Edward Elric -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">50</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">35</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="wjduky-accordion" role="tab" id="wjduky-accordion-label" aria-expanded="false" aria-selected="false">Halo</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="wjduky-accordion-label" aria-hidden="true" id="wjduky-accordion"><ul class="accordion characters-accordion" data-accordion="akjndh-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="44n7sd-accordion" role="tab" id="44n7sd-accordion-label" aria-expanded="false" aria-selected="false">Master Chief</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="44n7sd-accordion-label" aria-hidden="true" id="44n7sd-accordion"><div class="form-div" data-franchise="Halo" data-character="Master Chief" data-form="Base"><img src="js/img/franchises/Halo/Master%20Chief/Base.png" alt="Halo -> Master Chief -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">80</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">25</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Halo" data-character="Master Chief" data-form="Maxed"><img src="https://via.placeholder.com/50" alt="Halo -> Master Chief -> Maxed" class="form-selection-icon"><p>Maxed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">120</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">28</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="lobrf6-accordion" role="tab" id="lobrf6-accordion-label" aria-expanded="false" aria-selected="false">Megaman</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="lobrf6-accordion-label" aria-hidden="true" id="lobrf6-accordion"><ul class="accordion characters-accordion" data-accordion="akch54-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="8dwbyd-accordion" role="tab" id="8dwbyd-accordion-label" aria-expanded="false" aria-selected="false">Zero</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="8dwbyd-accordion-label" aria-hidden="true" id="8dwbyd-accordion"><div class="form-div" data-franchise="Megaman" data-character="Zero" data-form="Base"><img src="js/img/franchises/Megaman/Zero/Base.png" alt="Megaman -> Zero -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">100</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">70</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Megaman" data-character="Zero" data-form="Maxed"><img src="js/img/franchises/Megaman/Zero/Maxed.png" alt="Megaman -> Zero -> Maxed" class="form-selection-icon"><p>Maxed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">200</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">75</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="buvi3j-accordion" role="tab" id="buvi3j-accordion-label" aria-expanded="false" aria-selected="false">Real World</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="buvi3j-accordion-label" aria-hidden="true" id="buvi3j-accordion"><ul class="accordion characters-accordion" data-accordion="m4ctq1-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="da96t4-accordion" role="tab" id="da96t4-accordion-label" aria-expanded="false" aria-selected="false">Human</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="da96t4-accordion-label" aria-hidden="true" id="da96t4-accordion"><div class="form-div" data-franchise="Real World" data-character="Human" data-form="Armed"><img src="js/img/franchises/Real%20World/Human/Armed.png" alt="Real World -> Human -> Armed" class="form-selection-icon"><p>Armed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">20</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">1</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Real World" data-character="Human" data-form="Base"><img src="js/img/franchises/Real%20World/Human/Base.png" alt="Real World -> Human -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">15</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">2</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="y8ny9f-accordion" role="tab" id="y8ny9f-accordion-label" aria-expanded="false" aria-selected="false">Shovel Knight</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="y8ny9f-accordion-label" aria-hidden="true" id="y8ny9f-accordion"><ul class="accordion characters-accordion" data-accordion="zuipqb-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="apotdy-accordion" role="tab" id="apotdy-accordion-label" aria-expanded="false" aria-selected="false">Shovel Knight</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="apotdy-accordion-label" aria-hidden="true" id="apotdy-accordion"><div class="form-div" data-franchise="Shovel Knight" data-character="Shovel Knight" data-form="Base"><img src="js/img/franchises/Shovel%20Knight/Shovel%20Knight/Base.png" alt="Shovel Knight -> Shovel Knight -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">40</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">10</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Shovel Knight" data-character="Shovel Knight" data-form="Maxed"><img src="https://via.placeholder.com/50" alt="Shovel Knight -> Shovel Knight -> Maxed" class="form-selection-icon"><p>Maxed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">10</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">15</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="84tzhw-accordion" role="tab" id="84tzhw-accordion-label" aria-expanded="false" aria-selected="false">Spectre Knight</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="84tzhw-accordion-label" aria-hidden="true" id="84tzhw-accordion"><div class="form-div" data-franchise="Shovel Knight" data-character="Spectre Knight" data-form="Base"><img src="js/img/franchises/Shovel%20Knight/Spectre%20Knight/Base.png" alt="Shovel Knight -> Spectre Knight -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">40</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">25</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Shovel Knight" data-character="Spectre Knight" data-form="Maxed"><img src="https://via.placeholder.com/50" alt="Shovel Knight -> Spectre Knight -> Maxed" class="form-selection-icon"><p>Maxed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">100</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">38</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="lx9zuq-accordion" role="tab" id="lx9zuq-accordion-label" aria-expanded="false" aria-selected="false">Sonic</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="lx9zuq-accordion-label" aria-hidden="true" id="lx9zuq-accordion"><ul class="accordion characters-accordion" data-accordion="zx3vf1-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="vospai-accordion" role="tab" id="vospai-accordion-label" aria-expanded="false" aria-selected="false">Chaos</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="vospai-accordion-label" aria-hidden="true" id="vospai-accordion"><div class="form-div" data-franchise="Sonic" data-character="Chaos" data-form="Base"><img src="js/img/franchises/Sonic/Chaos/Base.png" alt="Sonic -> Chaos -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">80</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">50</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="c48wvo-accordion" role="tab" id="c48wvo-accordion-label" aria-expanded="false" aria-selected="false">Shadow</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="c48wvo-accordion-label" aria-hidden="true" id="c48wvo-accordion"><div class="form-div" data-franchise="Sonic" data-character="Shadow" data-form="Base"><img src="js/img/franchises/Sonic/Shadow/Base.png" alt="Sonic -> Shadow -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">75</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">95</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="ozy0g0-accordion" role="tab" id="ozy0g0-accordion-label" aria-expanded="false" aria-selected="false">Sonic</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="ozy0g0-accordion-label" aria-hidden="true" id="ozy0g0-accordion"><div class="form-div" data-franchise="Sonic" data-character="Sonic" data-form="Base"><img src="js/img/franchises/Sonic/Sonic/Base.png" alt="Sonic -> Sonic -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">65</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">100</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="2f62t3-accordion" role="tab" id="2f62t3-accordion-label" aria-expanded="false" aria-selected="false">The Legend of Zelda</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="2f62t3-accordion-label" aria-hidden="true" id="2f62t3-accordion"><ul class="accordion characters-accordion" data-accordion="rhg8ij-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="nkv8nt-accordion" role="tab" id="nkv8nt-accordion-label" aria-expanded="false" aria-selected="false">Link</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="nkv8nt-accordion-label" aria-hidden="true" id="nkv8nt-accordion"><div class="form-div" data-franchise="The Legend of Zelda" data-character="Link" data-form="Base"><img src="js/img/franchises/The%20Legend%20of%20Zelda/Link/Base.png" alt="The Legend of Zelda -> Link -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">24</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">25</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="The Legend of Zelda" data-character="Link" data-form="Maxed"><img src="https://via.placeholder.com/50" alt="The Legend of Zelda -> Link -> Maxed" class="form-selection-icon"><p>Maxed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">240</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">30</p>
+					</div>
+				</div></div></div></div></li></ul></div></li></ul>
+
+		<ul class="accordion franchise-accordion" id="p1" data-accordion="s8b5nm-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist">
+		<li class="franchises-li accordion-item is-active" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="14bb2i-accordion" role="tab" id="14bb2i-accordion-label" aria-expanded="true" aria-selected="true">Attack on Titan</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="14bb2i-accordion-label" aria-hidden="false" id="14bb2i-accordion" style="display: block;"><ul class="accordion characters-accordion" data-accordion="clkvjl-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item is-active" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="7c2n5c-accordion" role="tab" id="7c2n5c-accordion-label" aria-expanded="true" aria-selected="true">Eren Yeager</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="7c2n5c-accordion-label" aria-hidden="false" id="7c2n5c-accordion" style="display: block;"><div class="form-div" data-franchise="Attack on Titan" data-character="Eren Yeager" data-form="Attack Titan"><img src="js/img/franchises/Attack%20on%20Titan/Eren%20Yeager/Attack%20Titan.png" alt="Attack on Titan -> Eren Yeager -> Attack Titan" class="form-selection-icon"><p>Attack Titan</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">300</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">20</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item is-active" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="3vfw43-accordion" role="tab" id="3vfw43-accordion-label" aria-expanded="true" aria-selected="true">Levi Ackerman</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="3vfw43-accordion-label" aria-hidden="false" id="3vfw43-accordion" style="display: block;"><div class="form-div" data-franchise="Attack on Titan" data-character="Levi Ackerman" data-form="Base"><img src="js/img/franchises/Attack%20on%20Titan/Levi%20Ackerman/Base.png" alt="Attack on Titan -> Levi Ackerman -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">30</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">50</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="itymnp-accordion" role="tab" id="itymnp-accordion-label" aria-expanded="false" aria-selected="false">Bayonetta</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="itymnp-accordion-label" aria-hidden="true" id="itymnp-accordion"><ul class="accordion characters-accordion" data-accordion="mbzott-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="0kbdko-accordion" role="tab" id="0kbdko-accordion-label" aria-expanded="false" aria-selected="false">Bayonetta</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="0kbdko-accordion-label" aria-hidden="true" id="0kbdko-accordion"><div class="form-div" data-franchise="Bayonetta" data-character="Bayonetta" data-form="Base"><img src="js/img/franchises/Bayonetta/Bayonetta/Base.png" alt="Bayonetta -> Bayonetta -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">110</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">35</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="nnuqr2-accordion" role="tab" id="nnuqr2-accordion-label" aria-expanded="false" aria-selected="false">Chrono Trigger</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="nnuqr2-accordion-label" aria-hidden="true" id="nnuqr2-accordion"><ul class="accordion characters-accordion" data-accordion="m3i6xo-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="k74qww-accordion" role="tab" id="k74qww-accordion-label" aria-expanded="false" aria-selected="false">Crono</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="k74qww-accordion-label" aria-hidden="true" id="k74qww-accordion"><div class="form-div" data-franchise="Chrono Trigger" data-character="Crono" data-form="Base"><img src="js/img/franchises/Chrono%20Trigger/Crono/Base.png" alt="Chrono Trigger -> Crono -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">70</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">40</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Chrono Trigger" data-character="Crono" data-form="Maxed"><img src="https://via.placeholder.com/50" alt="Chrono Trigger -> Crono -> Maxed" class="form-selection-icon"><p>Maxed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">210</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">40</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="hiw9n7-accordion" role="tab" id="hiw9n7-accordion-label" aria-expanded="false" aria-selected="false">Devil May Cry</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="hiw9n7-accordion-label" aria-hidden="true" id="hiw9n7-accordion"><ul class="accordion characters-accordion" data-accordion="35w8gs-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="qy39qj-accordion" role="tab" id="qy39qj-accordion-label" aria-expanded="false" aria-selected="false">Dante</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="qy39qj-accordion-label" aria-hidden="true" id="qy39qj-accordion"><div class="form-div" data-franchise="Devil May Cry" data-character="Dante" data-form="Base"><img src="js/img/franchises/Devil%20May%20Cry/Dante/Base.png" alt="Devil May Cry -> Dante -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">120</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">65</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="dp7fjj-accordion" role="tab" id="dp7fjj-accordion-label" aria-expanded="false" aria-selected="false">Nero</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="dp7fjj-accordion-label" aria-hidden="true" id="dp7fjj-accordion"><div class="form-div" data-franchise="Devil May Cry" data-character="Nero" data-form="Base"><img src="js/img/franchises/Devil%20May%20Cry/Nero/Base.png" alt="Devil May Cry -> Nero -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">100</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">50</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="1z11hy-accordion" role="tab" id="1z11hy-accordion-label" aria-expanded="false" aria-selected="false">Vergil</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="1z11hy-accordion-label" aria-hidden="true" id="1z11hy-accordion"><div class="form-div" data-franchise="Devil May Cry" data-character="Vergil" data-form="Base"><img src="js/img/franchises/Devil%20May%20Cry/Vergil/Base.png" alt="Devil May Cry -> Vergil -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">130</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">60</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="y68n32-accordion" role="tab" id="y68n32-accordion-label" aria-expanded="false" aria-selected="false">Dragon Ball</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="y68n32-accordion-label" aria-hidden="true" id="y68n32-accordion"><ul class="accordion characters-accordion" data-accordion="2sti9e-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="om2963-accordion" role="tab" id="om2963-accordion-label" aria-expanded="false" aria-selected="false">Gohan</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="om2963-accordion-label" aria-hidden="true" id="om2963-accordion"><div class="form-div" data-franchise="Dragon Ball" data-character="Gohan" data-form="Kid Gohan"><img src="js/img/franchises/Dragon%20Ball/Gohan/Kid%20Gohan.png" alt="Dragon Ball -> Gohan -> Kid Gohan" class="form-selection-icon"><p>Kid Gohan</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">50</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">24</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="qqy0zp-accordion" role="tab" id="qqy0zp-accordion-label" aria-expanded="false" aria-selected="false">Goku</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="qqy0zp-accordion-label" aria-hidden="true" id="qqy0zp-accordion"><div class="form-div" data-franchise="Dragon Ball" data-character="Goku" data-form="Base"><img src="js/img/franchises/Dragon%20Ball/Goku/Base.png" alt="Dragon Ball -> Goku -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">100</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">30</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Dragon Ball" data-character="Goku" data-form="super saiyan 1"><img src="https://via.placeholder.com/50" alt="Dragon Ball -> Goku -> super saiyan 1" class="form-selection-icon"><p>super saiyan 1</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">2000</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">200</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="pwifb7-accordion" role="tab" id="pwifb7-accordion-label" aria-expanded="false" aria-selected="false">Krillin</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="pwifb7-accordion-label" aria-hidden="true" id="pwifb7-accordion"><div class="form-div" data-franchise="Dragon Ball" data-character="Krillin" data-form="Base"><img src="js/img/franchises/Dragon%20Ball/Krillin/Base.png" alt="Dragon Ball -> Krillin -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">50</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">23</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="ar0sii-accordion" role="tab" id="ar0sii-accordion-label" aria-expanded="false" aria-selected="false">Piccolo</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="ar0sii-accordion-label" aria-hidden="true" id="ar0sii-accordion"><div class="form-div" data-franchise="Dragon Ball" data-character="Piccolo" data-form="Base"><img src="js/img/franchises/Dragon%20Ball/Piccolo/Base.png" alt="Dragon Ball -> Piccolo -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">110</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">18</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="y88pt8-accordion" role="tab" id="y88pt8-accordion-label" aria-expanded="false" aria-selected="false">Vegeta</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="y88pt8-accordion-label" aria-hidden="true" id="y88pt8-accordion"><div class="form-div" data-franchise="Dragon Ball" data-character="Vegeta" data-form="Base"><img src="js/img/franchises/Dragon%20Ball/Vegeta/Base.png" alt="Dragon Ball -> Vegeta -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">95</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">40</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Dragon Ball" data-character="Vegeta" data-form="super saiyan 1"><img src="https://via.placeholder.com/50" alt="Dragon Ball -> Vegeta -> super saiyan 1" class="form-selection-icon"><p>super saiyan 1</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">2000</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">200</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="ajmqdz-accordion" role="tab" id="ajmqdz-accordion-label" aria-expanded="false" aria-selected="false">Fullmetal Alchemist</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="ajmqdz-accordion-label" aria-hidden="true" id="ajmqdz-accordion"><ul class="accordion characters-accordion" data-accordion="n4dzju-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="zrtt9s-accordion" role="tab" id="zrtt9s-accordion-label" aria-expanded="false" aria-selected="false">Alphonse Elric</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="zrtt9s-accordion-label" aria-hidden="true" id="zrtt9s-accordion"><div class="form-div" data-franchise="Fullmetal Alchemist" data-character="Alphonse Elric" data-form="Armoured"><img src="js/img/franchises/Fullmetal%20Alchemist/Alphonse%20Elric/Armoured.png" alt="Fullmetal Alchemist -> Alphonse Elric -> Armoured" class="form-selection-icon"><p>Armoured</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">150</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">10</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="29zp85-accordion" role="tab" id="29zp85-accordion-label" aria-expanded="false" aria-selected="false">Edward Elric</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="29zp85-accordion-label" aria-hidden="true" id="29zp85-accordion"><div class="form-div" data-franchise="Fullmetal Alchemist" data-character="Edward Elric" data-form="Base"><img src="js/img/franchises/Fullmetal%20Alchemist/Edward%20Elric/Base.png" alt="Fullmetal Alchemist -> Edward Elric -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">50</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">35</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="ux56ch-accordion" role="tab" id="ux56ch-accordion-label" aria-expanded="false" aria-selected="false">Halo</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="ux56ch-accordion-label" aria-hidden="true" id="ux56ch-accordion"><ul class="accordion characters-accordion" data-accordion="5pkus6-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="2tn4hs-accordion" role="tab" id="2tn4hs-accordion-label" aria-expanded="false" aria-selected="false">Master Chief</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="2tn4hs-accordion-label" aria-hidden="true" id="2tn4hs-accordion"><div class="form-div" data-franchise="Halo" data-character="Master Chief" data-form="Base"><img src="js/img/franchises/Halo/Master%20Chief/Base.png" alt="Halo -> Master Chief -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">80</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">25</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Halo" data-character="Master Chief" data-form="Maxed"><img src="https://via.placeholder.com/50" alt="Halo -> Master Chief -> Maxed" class="form-selection-icon"><p>Maxed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">120</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">28</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="vkvet7-accordion" role="tab" id="vkvet7-accordion-label" aria-expanded="false" aria-selected="false">Megaman</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="vkvet7-accordion-label" aria-hidden="true" id="vkvet7-accordion"><ul class="accordion characters-accordion" data-accordion="46xn6o-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="sb3z1l-accordion" role="tab" id="sb3z1l-accordion-label" aria-expanded="false" aria-selected="false">Zero</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="sb3z1l-accordion-label" aria-hidden="true" id="sb3z1l-accordion"><div class="form-div" data-franchise="Megaman" data-character="Zero" data-form="Base"><img src="js/img/franchises/Megaman/Zero/Base.png" alt="Megaman -> Zero -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">100</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">70</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Megaman" data-character="Zero" data-form="Maxed"><img src="js/img/franchises/Megaman/Zero/Maxed.png" alt="Megaman -> Zero -> Maxed" class="form-selection-icon"><p>Maxed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">200</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">75</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="0kaez5-accordion" role="tab" id="0kaez5-accordion-label" aria-expanded="false" aria-selected="false">Real World</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="0kaez5-accordion-label" aria-hidden="true" id="0kaez5-accordion"><ul class="accordion characters-accordion" data-accordion="6whbtu-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="v5wdsj-accordion" role="tab" id="v5wdsj-accordion-label" aria-expanded="false" aria-selected="false">Human</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="v5wdsj-accordion-label" aria-hidden="true" id="v5wdsj-accordion"><div class="form-div" data-franchise="Real World" data-character="Human" data-form="Armed"><img src="js/img/franchises/Real%20World/Human/Armed.png" alt="Real World -> Human -> Armed" class="form-selection-icon"><p>Armed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">20</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">1</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Real World" data-character="Human" data-form="Base"><img src="js/img/franchises/Real%20World/Human/Base.png" alt="Real World -> Human -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">15</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">2</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="3cb4ih-accordion" role="tab" id="3cb4ih-accordion-label" aria-expanded="false" aria-selected="false">Shovel Knight</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="3cb4ih-accordion-label" aria-hidden="true" id="3cb4ih-accordion"><ul class="accordion characters-accordion" data-accordion="xw8zy3-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="kmvsgn-accordion" role="tab" id="kmvsgn-accordion-label" aria-expanded="false" aria-selected="false">Shovel Knight</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="kmvsgn-accordion-label" aria-hidden="true" id="kmvsgn-accordion"><div class="form-div" data-franchise="Shovel Knight" data-character="Shovel Knight" data-form="Base"><img src="js/img/franchises/Shovel%20Knight/Shovel%20Knight/Base.png" alt="Shovel Knight -> Shovel Knight -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">40</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">10</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Shovel Knight" data-character="Shovel Knight" data-form="Maxed"><img src="https://via.placeholder.com/50" alt="Shovel Knight -> Shovel Knight -> Maxed" class="form-selection-icon"><p>Maxed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">10</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">15</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="2415ia-accordion" role="tab" id="2415ia-accordion-label" aria-expanded="false" aria-selected="false">Spectre Knight</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="2415ia-accordion-label" aria-hidden="true" id="2415ia-accordion"><div class="form-div" data-franchise="Shovel Knight" data-character="Spectre Knight" data-form="Base"><img src="js/img/franchises/Shovel%20Knight/Spectre%20Knight/Base.png" alt="Shovel Knight -> Spectre Knight -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">40</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">25</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="Shovel Knight" data-character="Spectre Knight" data-form="Maxed"><img src="https://via.placeholder.com/50" alt="Shovel Knight -> Spectre Knight -> Maxed" class="form-selection-icon"><p>Maxed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">100</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">38</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="2dxrfj-accordion" role="tab" id="2dxrfj-accordion-label" aria-expanded="false" aria-selected="false">Sonic</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="2dxrfj-accordion-label" aria-hidden="true" id="2dxrfj-accordion"><ul class="accordion characters-accordion" data-accordion="i0bx79-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="o4cozz-accordion" role="tab" id="o4cozz-accordion-label" aria-expanded="false" aria-selected="false">Chaos</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="o4cozz-accordion-label" aria-hidden="true" id="o4cozz-accordion"><div class="form-div" data-franchise="Sonic" data-character="Chaos" data-form="Base"><img src="js/img/franchises/Sonic/Chaos/Base.png" alt="Sonic -> Chaos -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">80</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">50</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="ehz7j6-accordion" role="tab" id="ehz7j6-accordion-label" aria-expanded="false" aria-selected="false">Shadow</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="ehz7j6-accordion-label" aria-hidden="true" id="ehz7j6-accordion"><div class="form-div" data-franchise="Sonic" data-character="Shadow" data-form="Base"><img src="js/img/franchises/Sonic/Shadow/Base.png" alt="Sonic -> Shadow -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">75</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">95</p>
+					</div>
+				</div></div></div></div></li><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="nu9gor-accordion" role="tab" id="nu9gor-accordion-label" aria-expanded="false" aria-selected="false">Sonic</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="nu9gor-accordion-label" aria-hidden="true" id="nu9gor-accordion"><div class="form-div" data-franchise="Sonic" data-character="Sonic" data-form="Base"><img src="js/img/franchises/Sonic/Sonic/Base.png" alt="Sonic -> Sonic -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">65</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">100</p>
+					</div>
+				</div></div></div></div></li></ul></div></li><li class="franchises-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="hhvfgo-accordion" role="tab" id="hhvfgo-accordion-label" aria-expanded="false" aria-selected="false">The Legend of Zelda</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="hhvfgo-accordion-label" aria-hidden="true" id="hhvfgo-accordion"><ul class="accordion characters-accordion" data-accordion="4m2ji3-accordion" data-multi-expand="true" data-allow-all-closed="true" role="tablist"><li class="character-li accordion-item" data-accordion-item="" role="presentation"><a href="#" class="accordion-title" aria-controls="olmvft-accordion" role="tab" id="olmvft-accordion-label" aria-expanded="false" aria-selected="false">Link</a><div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="olmvft-accordion-label" aria-hidden="true" id="olmvft-accordion"><div class="form-div" data-franchise="The Legend of Zelda" data-character="Link" data-form="Base"><img src="js/img/franchises/The%20Legend%20of%20Zelda/Link/Base.png" alt="The Legend of Zelda -> Link -> Base" class="form-selection-icon"><p>Base</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">24</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">25</p>
+					</div>
+				</div></div></div><div class="form-div" data-franchise="The Legend of Zelda" data-character="Link" data-form="Maxed"><img src="https://via.placeholder.com/50" alt="The Legend of Zelda -> Link -> Maxed" class="form-selection-icon"><p>Maxed</p><div class="formStatsDiv"><div class="formStatsDiv">
+					<div class="formHPDiv">
+						<h6 class="formHPTitle">HP</h6>
+						<p class="formHPValue">240</p>
+					</div>
+					<div class="formSpeedDiv">
+						<h6 class="formSpeedTitle">Speed</h6>
+						<p class="formSpeedValue">30</p>
+					</div>
+				</div></div></div></div></li></ul></div></li></ul>
+	</section>
+
+
+	<!-- character selection names -->
+	<div class="showSelection">
+		<p>player 1: <span class="player1Name">Eren Yeager(Attack Titan)</span></p>
+		<p>player 2: <span class="player2Name">Levi Ackerman(Base)</span></p>
+	</div>
+
+
+	<!-- fight button -->
+	<div id="submit">
+		<button>FIGHT!</button>
+	</div>
+
+
+	<!-- logs -->
+	<h3 id="as-it-happens-heading">As it happens</h3>
+	<div class="fighter-pictures" style="display: flex;">
+		<img src="js/img/franchises/Attack on Titan/Eren Yeager/Attack Titan.png" alt="" class="zero winner">
+		<h2>VS</h2>
+		<img src="js/img/franchises/Attack on Titan/Levi Ackerman/Base.png" alt="" class="one loser">
+	</div>
+	<div id="logs"><p>
+				<span class="character-name">Eren Yeager(Attack Titan)</span> 
+				damaged by 
+				<span class="atk-move">Slash</span> 
+				and now at 
+				<span class="hp">280</span> 
+
+			</p><p>
+					<span class="character-name">Levi Ackerman(Base)</span> 
+					reduced 
+					<span class="atk-move">Melee</span> 
+					by 
+					<span class="number">10</span> 
+					with 
+					<span class="def-move">dodge</span> 
+					and now at 
+					<span class="hp">-10</span> 
+
+				</p><p class="win">Levi Ackerman(Base) died. The winner is Eren Yeager(Attack Titan)</p></div>
+
+
+
+
+	<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+
+	<!-- <script src="js/script3.js"></script> -->
+	<script src="js/script4.js"></script>
+
+
+</body></html>
