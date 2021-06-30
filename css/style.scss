@@ -47,7 +47,8 @@ header{
       border-bottom-right-radius: 100px;
 
 			.form-selection-icon{
-				width: 75px;
+				width: auto;
+				max-height: 75px;
 			}
 
       p {

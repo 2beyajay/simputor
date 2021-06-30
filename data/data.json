@@ -1,10 +1,10 @@
 {
 	"Dragon ball": {
 		"Goku": {
-			"base": {
+			"Base": {
 				"health": 100,
 				"speed": 30,
-				"imgURL": "Dragon ball/Goku/base",
+				"imgURL": "Dragon ball/Goku/Base",
 				"ospecial": [{
 					"name": "melee",
 					"power": 15,
@@ -59,10 +59,10 @@
 			}
 		},
 		"Vegeta": {
-			"base": {
+			"Base": {
 				"health": 95,
 				"speed": 40,
-				"imgURL": "Dragon ball/Vegeta/base",
+				"imgURL": "Dragon ball/Vegeta/Base",
 				"ospecial": [{
 					"name": "melee",
 					"power": 10,
@@ -117,10 +117,10 @@
 			}
 		},
 		"krillin": {
-			"base": {
+			"Base": {
 				"health": 50,
 				"speed": 23,
-				"imgURL": "imageURl.com",
+				"imgURL": "Dragon ball/krillin/Base",
 				"ospecial": [{
 					"name": "melee",
 					"power": 15,
@@ -143,10 +143,10 @@
 			}
 		},
 		"Piccolo": {
-			"base": {
+			"Base": {
 				"health": 110,
 				"speed": 18,
-				"imgURL": "imageURl.com",
+				"imgURL": "Dragon ball/Piccolo/Base",
 				"ospecial": [{
 					"name": "melee",
 					"power": 15,
@@ -180,7 +180,7 @@
 			"Kid Gohan": {
 				"health": 50,
 				"speed": 24,
-				"imgURL": "imageURl.com",
+				"imgURL": "Dragon ball/Gohan/Kid Gohan",
 				"ospecial": [{
 					"name": "melee",
 					"power": 10,
@@ -209,7 +209,7 @@
 			"Base": {
 				"health": 40,
 				"speed": 10,
-				"imgURL": "imageURl.com",
+				"imgURL": "Shovel Knight/Shovel Knight/Base",
 				"ospecial": [{
 					"name": "Shovel Slap",
 					"power": 15,
@@ -233,7 +233,7 @@
 			"Maxed": {
 				"health": 10,
 				"speed": 15,
-				"imgURL": "imageURl.com",
+				"imgURL": "Shovel Knight/Shovel Knight/Maxed",
 				"ospecial": [{
 					"name": "Shovel Slap",
 					"power": 15,
@@ -271,7 +271,7 @@
 			"Base": {
 				"health": 40,
 				"speed": 25,
-				"imgURL": "imageURl.com",
+				"imgURL": "Shovel Knight/Spectre Knight/Base",
 				"ospecial": [{
 					"name": "Scythe Slash",
 					"power": 15,
@@ -295,7 +295,7 @@
 			"Maxed": {
 				"health": 100,
 				"speed": 38,
-				"imgURL": "imageURl.com",
+				"imgURL": "Shovel Knight/Spectre Knight/Maxed",
 				"ospecial": [{
 					"name": "Scythe Slash",
 					"power": 15,
@@ -340,7 +340,7 @@
 			"Base": {
 				"health": 30,
 				"speed": 50,
-				"imgURL": "imageURl.com",
+				"imgURL": "Attack on Titan/Levi Ackerman/Base",
 				"ospecial": [{
 					"name": "Kick",
 					"power": 5,
@@ -366,7 +366,7 @@
 			"Attack Titan": {
 				"health": 300,
 				"speed": 20,
-				"imgURL": "imageURl.com",
+				"imgURL": "Attack on Titan/Eren Yeager/Attack Titan",
 				"ospecial": [{
 					"name": "Melee",
 					"power": 50,
@@ -396,10 +396,10 @@
 
 	"Real World": {
 		"Human": {
-			"base": {
+			"Base": {
 				"health": 15,
 				"speed": 2,
-				"imgURL": "imageURl.com",
+				"imgURL": "Real World/Human/Base",
 				"ospecial": [{
 					"name": "melee",
 					"power": 1,
@@ -423,7 +423,7 @@
 			"Armed": {
 				"health": 20,
 				"speed": 1,
-				"imgURL": "imageURl.com",
+				"imgURL": "Real World/Human/Armed",
 				"ospecial": [{
 					"name": "Melee",
 					"power": 1,
@@ -452,7 +452,7 @@
 			"Base": {
 				"health": 50,
 				"speed": 35,
-				"imgURL": "imageURl.com",
+				"imgURL": "Fullmetal Alchemist/Edward Elric/Base",
 				"ospecial": [{
 					"name": "Melee",
 					"power": 7,
@@ -486,7 +486,7 @@
 			"Armoured": {
 				"health": 150,
 				"speed": 10,
-				"imgURL": "imageURl.com",
+				"imgURL": "Fullmetal Alchemist/Alphonse Elric/Armoured",
 				"ospecial": [{
 					"name": "Melee",
 					"power": 12,
@@ -519,7 +519,7 @@
 			"Base": {
 				"health": 100,
 				"speed": 70,
-				"imgURL": "imageURl.com",
+				"imgURL": "Megaman/Zero/Base",
 				"ospecial": [{
 					"name": "Z-Saber",
 					"power": 35,
@@ -539,7 +539,7 @@
 			"Maxed": {
 				"health": 200,
 				"speed": 75,
-				"imgURL": "imageURl.com",
+				"imgURL": "Megaman/Zero/Maxed",
 				"ospecial": [{
 					"name": "Z-Saber Combo",
 					"power": 65,
@@ -565,10 +565,10 @@
 
 	"The Legend of Zelda": {
 		"Link": {
-			"base": {
+			"Base": {
 				"health": 24,
 				"speed": 25,
-				"imgURL": "imageURl.com",
+				"imgURL": "The Legend of Zelda/Link/Base",
 				"ospecial": [{
 					"name": "Spin Attack",
 					"power": 21,
@@ -592,7 +592,7 @@
 			"Maxed": {
 				"health": 240,
 				"speed": 30,
-				"imgURL": "imageURl.com",
+				"imgURL": "The Legend of Zelda/Link/Maxed",
 				"ospecial": [{
 					"name": "Urbosa's Fury",
 					"power": 110,
@@ -626,10 +626,10 @@
 
 	"Chrono Trigger": {
 		"Crono": {
-			"base": {
+			"Base": {
 				"health": 70,
 				"speed": 40,
-				"imgURL": "imageURl.com",
+				"imgURL": "Chrono Trigger/Crono/Base",
 				"ospecial": [{
 					"name": "Wind Slash",
 					"power": 35,
@@ -657,7 +657,7 @@
 			"Maxed": {
 				"health": 210,
 				"speed": 40,
-				"imgURL": "imageURl.com",
+				"imgURL": "Chrono Trigger/Crono/Maxed",
 				"ospecial": [{
 					"name": "Dreemseeker",
 					"power": 80,
@@ -694,7 +694,7 @@
 			"Base": {
 				"health": 80,
 				"speed": 25,
-				"imgURL": "imageURl.com",
+				"imgURL": "Halo/Master Chief/Base",
 				"ospecial": [{
 					"name": "Pistol",
 					"power": 20,
@@ -718,7 +718,7 @@
 			"Maxed": {
 				"health": 120,
 				"speed": 28,
-				"imgURL": "imageURl.com",
+				"imgURL": "Halo/Master Chief/Maxed",
 				"ospecial": [{
 					"name": "Energy Sword",
 					"power": 50,
@@ -744,10 +744,10 @@
 
 	"Sonic": {
 		"Sonic": {
-			"base": {
+			"Base": {
 				"health": 65,
 				"speed": 100,
-				"imgURL": "imageURl.com",
+				"imgURL": "Sonic/Sonic/Base",
 				"ospecial": [{
 					"name": "Homing Attack",
 					"power": 30,
@@ -778,10 +778,10 @@
 			}
 		},
 		"Shadow": {
-			"base": {
+			"Base": {
 				"health": 75,
 				"speed": 95,
-				"imgURL": "imageURl.com",
+				"imgURL": "Sonic/Shadow/Base",
 				"ospecial": [{
 					"name": "Chaos Spear",
 					"power": 25,
@@ -818,7 +818,7 @@
 			"Base": {
 				"health": 80,
 				"speed": 50,
-				"imgURL": "imageURl.com",
+				"imgURL": "Sonic/Chaos/Base",
 				"ospecial": [{
 					"name": "Chaos Strike",
 					"power": 35,
@@ -854,7 +854,7 @@
 			"Base": {
 				"health": 120,
 				"speed": 65,
-				"imgURL": "imageURl.com",
+				"imgURL": "Devil May Cry/Dante/Base",
 				"ospecial": [{
 					"name": "Rebellion Combo",
 					"power": 50,
@@ -884,7 +884,7 @@
 			"Base": {
 				"health": 130,
 				"speed": 60,
-				"imgURL": "imageURl.com",
+				"imgURL": "Devil May Cry/Vergil/Base",
 				"ospecial": [{
 					"name": "Lunar Phase",
 					"power": 45,
@@ -914,7 +914,7 @@
 			"Base": {
 				"health": 100,
 				"speed": 50,
-				"imgURL": "imageURl.com",
+				"imgURL": "Devil May Cry/Nero/Base",
 				"ospecial": [{
 					"name": "Red Queen",
 					"power": 40,
@@ -955,7 +955,7 @@
 			"Base": {
 				"health": 110,
 				"speed": 35,
-				"imgURL": "imageURl.com",
+				"imgURL": "Bayonetta/Bayonetta/Base",
 				"ospecial": [{
 					"name": "Wicked Weeves",
 					"power": 60,

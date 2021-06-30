@@ -40,7 +40,7 @@ let slider = document.querySelector('#clock');
 let clockValue = document.querySelector('#clockValue');
 clockValue.innerText = slider.value;
 slider.addEventListener('change', (e) => {
-	console.log(slider.value);
+	// console.log(slider.value);
 	clock = clock / slider.value
 	clockValue.innerText = slider.value;
 });
@@ -165,7 +165,7 @@ ref.once('value', (snapshot) => {
 			player0ref.once('value', (player0data) => {
 				fighter0 = player0data.val();
 				fighter0.name = `${form.dataset.character}(${form.dataset.form})`;
-				console.log('player 1:' + fighter0.name);
+				// console.log('player 1:' + fighter0.name);
 
 				// showing the selected name in html
 				player0NameHtml.forEach(element => {
@@ -182,7 +182,7 @@ ref.once('value', (snapshot) => {
 			player1ref.once('value', (player1data) => {
 				fighter1 = player1data.val();
 				fighter1.name = `${form.dataset.character}(${form.dataset.form})`;
-				console.log('player 2:' + fighter1.name);
+				// console.log('player 2:' + fighter1.name);
 				
 				// showing the selected name in html
 				player1NameHtml.forEach(element => {
@@ -202,7 +202,7 @@ async function init() {
 
 	submit.addEventListener('click', (e) => {
 		if (!fighter0 || !fighter1) {
-			console.log('please select 2 fighters');
+			// console.log('please select 2 fighters');
 		} else {
 
 			logs.innerHTML = '';
@@ -210,8 +210,6 @@ async function init() {
 			player0 = new Fighter(fighter0);
 			player1 = new Fighter(fighter1);
 			fighters = [player0, player1]
-
-			console.log(player0);
 
 			let fighterPictures = document.querySelector(".fighter-pictures")
 
@@ -271,14 +269,14 @@ async function fight(player0, player1) {
 		let defenseName = defenseTaken.name;
 
 
-		console.log('\n');
-		console.log(moveName, movePower);
-		console.log(defenseName, defensePower);
+		// console.log('\n');
+		// console.log(moveName, movePower);
+		// console.log(defenseName, defensePower);
 
 		// no defense
 		if (defensePower <= 0) {
 			fighters[1 - whoseTurn].health -= movePower
-			console.log(`${fighters[1 - whoseTurn].name} damaged by ${moveName} and now at ${fighters[1 - whoseTurn].health} \n`);
+			// console.log(`${fighters[1 - whoseTurn].name} damaged by ${moveName} and now at ${fighters[1 - whoseTurn].health} \n`);
 
 			logs.innerHTML += 
 			`<p>
@@ -292,7 +290,7 @@ async function fight(player0, player1) {
 			// simple defense
 			if (defensePower < movePower) {
 				fighters[1 - whoseTurn].health -= (movePower - defensePower)
-				console.log(`${fighters[1 - whoseTurn].name} reduced ${moveName} by ${defensePower} with ${defenseName} and now at ${fighters[1 - whoseTurn].health} \n`);
+				// console.log(`${fighters[1 - whoseTurn].name} reduced ${moveName} by ${defensePower} with ${defenseName} and now at ${fighters[1 - whoseTurn].health} \n`);
 
 				logs.innerHTML += 
 				`<p>
@@ -310,7 +308,7 @@ async function fight(player0, player1) {
 			// counter
 			else {
 				fighters[whoseTurn].health -= defensePower;
-				console.log(`${fighters[1 - whoseTurn].name} countered ${moveName} with ${defenseName} and did ${defensePower} damage`);
+				// console.log(`${fighters[1 - whoseTurn].name} countered ${moveName} with ${defenseName} and did ${defensePower} damage`);
 
 				logs.innerHTML += `
 				<p>
@@ -331,13 +329,14 @@ async function fight(player0, player1) {
 
 		// sending the death and winner message
 		if (player0.health <= 0) {
-			console.log(`${player0.name} died. The winner is ${player1.name}`);
+			// console.log(`${player0.name} died. The winner is ${player1.name}`);
 			logs.innerHTML += `<p class="win">${player0.name} died. The winner is ${player1.name}</p>`
+
 		}
 		if (player1.health <= 0) {
-			console.log(`${player1.name} died. The winner is ${player0.name}`);
-
+			// console.log(`${player1.name} died. The winner is ${player0.name}`);
 			logs.innerHTML += `<p class="win">${player1.name} died. The winner is ${player0.name}</p>`
+			
 		}
 
 		// delay for the next turn

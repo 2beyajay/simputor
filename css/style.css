@@ -48,7 +48,8 @@ header h1 {
 }
 
 .selection-sect .franchise-accordion .form-div .form-selection-icon {
-  width: 75px;
+  width: auto;
+  max-height: 75px;
 }
 
 .selection-sect .franchise-accordion .form-div p {
