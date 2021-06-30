@@ -119,7 +119,7 @@ header{
 	}
 
 	.winner{
-		animation: glow 0.5s infinite alternate ease-out;
+		animation: glow 0.5s infinite alternate ease-out;	
 		
 	}
 }
@@ -139,6 +139,7 @@ header{
     color: white;
 		width: 70%;
 		min-width: 250px;
+		font-size: 1.25em;
   }
 
   p:nth-child(2n) {
