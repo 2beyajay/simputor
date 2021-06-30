@@ -12,6 +12,7 @@
 
 <body>
 
+
 	<!-- controls for the speed of the simulation -->
 	<div class="speedToolDiv">
 		<input type="range" id="clock" name="clock" min="0.5" max="3" step="0.5" value="1">
@@ -19,17 +20,20 @@
 	</div>
 
 
-
+	<!-- main heading -->
 	<header>
 		<h1>wELcoMe TO simPuTOR</h1>
 	</header>
 
+
+	<!-- character selection names -->
 	<div class="showSelection">
 		<p>player 1: <span class="player1Name"></span></p>
 		<p>player 2: <span class="player2Name"></span></p>
 	</div>
 
-	<!-- new -->
+
+	<!-- character selection section -->
 	<section class="selection-sect">
 		<ul class='accordion franchise-accordion' id="p0" data-accordion data-multi-expand="true" data-allow-all-closed="true">
 		</ul>
@@ -39,16 +43,20 @@
 	</section>
 
 
+	<!-- character selection names -->
 	<div class="showSelection">
 		<p>player 1: <span class="player1Name"></span></p>
 		<p>player 2: <span class="player2Name"></span></p>
 	</div>
 
+
+	<!-- fight button -->
 	<div id="submit">
 		<button>FIGHT!</button>
 	</div>
 
 
+	<!-- logs -->
 	<h3 id="as-it-happens-heading">As it happens</h3>
 	<div class="fighter-pictures">
 		<img src="https://via.placeholder.com/150" alt="" class="zero">
@@ -59,7 +67,7 @@
 
 
 
-	
+
 	<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
