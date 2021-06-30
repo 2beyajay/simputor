@@ -1,10 +1,10 @@
 {
-	"Dragon ball": {
+	"Dragon Ball": {
 		"Goku": {
 			"Base": {
 				"health": 100,
 				"speed": 30,
-				"imgURL": "Dragon ball/Goku/Base",
+				"imgURL": "Dragon Ball/Goku/Base",
 				"ospecial": [{
 					"name": "melee",
 					"power": 15,
@@ -32,7 +32,7 @@
 			"super saiyan 1": {
 				"health": 2000,
 				"speed": 200,
-				"imgURL": "Dragon ball/Goku/super saiyan 1",
+				"imgURL": "Dragon Ball/Goku/super saiyan 1",
 				"ospecial": [{
 					"name": "melee",
 					"power": 100,
@@ -62,7 +62,7 @@
 			"Base": {
 				"health": 95,
 				"speed": 40,
-				"imgURL": "Dragon ball/Vegeta/Base",
+				"imgURL": "Dragon Ball/Vegeta/Base",
 				"ospecial": [{
 					"name": "melee",
 					"power": 10,
@@ -90,7 +90,7 @@
 			"super saiyan 1": {
 				"health": 2000,
 				"speed": 200,
-				"imgURL": "Dragon ball/Vegeta/super saiyan 1",
+				"imgURL": "Dragon Ball/Vegeta/super saiyan 1",
 				"ospecial": [{
 					"name": "melee",
 					"power": 100,
@@ -120,7 +120,7 @@
 			"Base": {
 				"health": 50,
 				"speed": 23,
-				"imgURL": "Dragon ball/krillin/Base",
+				"imgURL": "Dragon Ball/krillin/Base",
 				"ospecial": [{
 					"name": "melee",
 					"power": 15,
@@ -146,7 +146,7 @@
 			"Base": {
 				"health": 110,
 				"speed": 18,
-				"imgURL": "Dragon ball/Piccolo/Base",
+				"imgURL": "Dragon Ball/Piccolo/Base",
 				"ospecial": [{
 					"name": "melee",
 					"power": 15,
@@ -180,7 +180,7 @@
 			"Kid Gohan": {
 				"health": 50,
 				"speed": 24,
-				"imgURL": "Dragon ball/Gohan/Kid Gohan",
+				"imgURL": "Dragon Ball/Gohan/Kid Gohan",
 				"ospecial": [{
 					"name": "melee",
 					"power": 10,

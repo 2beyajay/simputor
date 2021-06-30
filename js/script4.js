@@ -17,7 +17,6 @@ firebase.initializeApp(firebaseConfig);
 let ref = firebase.database().ref('/');
 
 
-
 let franchiceUL0 = document.querySelector('.selection-sect #p0')
 let franchiceUL1 = document.querySelector('.selection-sect #p1')
 
@@ -112,9 +111,11 @@ ref.once('value', (snapshot) => {
 				formsAccordionDiv.appendChild(formDiv);
 
 				let formIconImg = document.createElement('img');
-
+				
 				formIconImg.setAttribute('src', 
-					(imageExists(`../img/franchises/${franchises}/${chars}/${frms}.png`) ? `../img/franchises/${franchises}/${chars}/${frms}.png` : 'https://via.placeholder.com/50')
+					imageExists(`js/img/franchises/${franchises}/${chars}/${frms}.png`) 
+					? encodeURI(`js/img/franchises/${franchises}/${chars}/${frms}.png`) 
+					: 'https://via.placeholder.com/50'
 				)
 
 
@@ -218,9 +219,12 @@ async function init() {
 			let fighterPicture1 = document.querySelector(".fighter-pictures .one")
 			// fighterPicture1.src = fighter1.imgURL
 
-			fighterPicture0.src = (imageExists(`../img/franchises/${fighter0.imgURL}.png`) ? `../img/franchises/${fighter0.imgURL}.png` : 'https://via.placeholder.com/150')
+			let img0 = encodeURI(`${imagePathPrefix}/${fighter0.imgURL}.png`)
+			let img1 = encodeURI(`${imagePathPrefix}/${fighter1.imgURL}.png`)
+
+			fighterPicture0.src = imageExists(img0) ? img0 : 'https://via.placeholder.com/150'
 			
-			fighterPicture1.src = (imageExists(`../img/franchises/${fighter1.imgURL}.png`) ? `../img/franchises/${fighter1.imgURL}.png` : 'https://via.placeholder.com/150')
+			fighterPicture1.src = imageExists(img1) ? img1 : 'https://via.placeholder.com/150'
 
 
 			fighterPictures.style.display = "flex";
